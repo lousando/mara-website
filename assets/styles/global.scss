@@ -1,9 +1,14 @@
+$az-blue: #023373;
+$az-orange: #D95F18;
+$az-red: #bf0a30;
+$az-yellow: #F2B705;
+
+$primary: $az-blue;
+$danger: $az-red;
+$warning: $az-yellow;
 
 @import "~bulma";
 
-$az-blue: #023373;
-$az-orange: #D95F18;
-$az-yellow: #F2B705;
 
 .square-button {
   cursor: pointer;

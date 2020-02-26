@@ -4,7 +4,7 @@ export default {
 	 ** Headers of the page
 	 */
 	head: {
-		title: process.env.npm_package_name || "",
+		title: "Maricopa ARA",
 		meta: [
 			{ charset: "utf-8" },
 			{
@@ -17,7 +17,7 @@ export default {
 				content: process.env.npm_package_description || ""
 			}
 		],
-		link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
+		link: [{ rel: "icon", type: "image/x-icon", href: "/imgs/favicon.ico" }]
 	},
 	/*
 	 ** Customize the progress-bar color
@@ -39,17 +39,5 @@ export default {
 	/*
 	 ** Build configuration
 	 */
-	build: {
-		postcss: {
-			preset: {
-				features: {
-					customProperties: false
-				}
-			}
-		},
-		/*
-		 ** You can extend webpack config here
-		 */
-		extend(config, ctx) {}
-	}
+	build: {}
 };

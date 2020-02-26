@@ -1,4 +1,4 @@
-# mara-website
+# MARA Website
 
 > MARA Website
 
@@ -6,17 +6,17 @@
 
 ``` bash
 # install dependencies
-$ yarn install
+$ yarn
 
 # serve with hot reload at localhost:3000
-$ yarn dev
+$ yarn watch
 
 # build for production and launch server
 $ yarn build
 $ yarn start
 
-# generate static project
-$ yarn generate
+# run tests
+$ yarn test
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).

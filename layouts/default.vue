@@ -9,6 +9,77 @@
 					<div class="subtitle">
 						A 501(c)(3) nonprofit corporation
 					</div>
+					<!-- icons -->
+					<div>
+						<a
+							href="http://facebook.com/copahams"
+							target="_blank"
+							class="social-icon social-icon--facebook"
+						>
+							<font-awesome-icon :icon="faFacebook" />
+						</a>
+						<a
+							href="https://twitter.com/CopaHams"
+							target="_blank"
+							class="social-icon social-icon--twitter"
+						>
+							<font-awesome-icon :icon="faTwitter" />
+						</a>
+						<a
+							href="https://www.instagram.com/copahams/"
+							target="_blank"
+							class="social-icon social-icon--instagram"
+						>
+							<font-awesome-icon :icon="faInstagram" />
+						</a>
+						<a
+							href="https://www.youtube.com/channel/UC1JJQI7fnsLHcuerGbHLJKw"
+							target="_blank"
+							class="social-icon social-icon--youtube"
+						>
+							<font-awesome-icon :icon="faYoutube" />
+						</a>
+						<a
+							href="https://www.flickr.com/photos/copahams/albums"
+							target="_blank"
+							class="social-icon social-icon--flickr"
+						>
+							<font-awesome-icon :icon="faFlickr" />
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="level">
+			<div class="level-item has-text-centered">
+				<div>
+					<p class="heading">CAC Maricopa Campus</p>
+					<div>145.210 -600KHz, PL 162.2</div>
+					<div>449.125 -5MHz, PL 136.5</div>
+					<div class="is-italic">Parrot Feature using DMTF 9999</div>
+					<div class="has-text-weight-bold">Weekly Net:</div>
+					<div>
+						Every Monday Night @ 8:00pm MST (03:00 UTC)
+					</div>
+				</div>
+			</div>
+			<div class="level-item has-text-centered">
+				<div>
+					<p class="heading">Thunderbird Farms</p>
+					<p>446.300 -5MHz, PL 100.0</p>
+				</div>
+			</div>
+			<div class="level-item has-text-centered">
+				<div>
+					<div class="heading">Wires X Fusion Repeater</div>
+					<div>146.780 -600Khz, PL 100.0</div>
+					<div>Wires X Node 18445/Room 28445</div>
+					<div>Auto/Auto Mode</div>
+					<div class="has-text-weight-bold">Weekly Net:</div>
+					<div>
+						Every Wednesday Night @ 7:00pm MST (02:00 UTC)
+					</div>
 				</div>
 			</div>
 		</div>
@@ -79,13 +150,25 @@
 
 <script>
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import {
+	faGithub,
+	faFacebook,
+	faTwitter,
+	faInstagram,
+	faYoutube,
+	faFlickr
+} from "@fortawesome/free-brands-svg-icons";
 
 export default {
 	name: "mara-footer",
 	data() {
 		return {
-			faGithub
+			faGithub,
+			faFacebook,
+			faTwitter,
+			faInstagram,
+			faYoutube,
+			faFlickr
 		};
 	},
 	components: {
@@ -103,5 +186,45 @@ export default {
 .github-icon {
 	color: black;
 	font-size: 2.2rem;
+}
+
+/**
+  * social media links
+  * ===================
+ */
+
+@mixin social-icon-colors($color) {
+	color: $color;
+
+	&:active,
+	&:hover {
+		color: $color;
+	}
+}
+
+.social-icon {
+	font-size: 1.5rem;
+	margin-left: 0.1rem;
+	margin-right: 0.1rem;
+
+	&--facebook {
+		@include social-icon-colors(#405d9a);
+	}
+
+	&--twitter {
+		@include social-icon-colors(rgb(29, 161, 242));
+	}
+
+	&--instagram {
+		@include social-icon-colors(#d2348b);
+	}
+
+	&--youtube {
+		@include social-icon-colors(#cc0000);
+	}
+
+	&--flickr {
+		@include social-icon-colors(#0063db);
+	}
 }
 </style>

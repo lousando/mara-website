@@ -10,7 +10,7 @@
 		<div
 			:class="{
 				'navbar-menu': true,
-				'is-active': this.showNavbar,
+				'is-active': this.showNavbar
 			}"
 		>
 			<div class="navbar-start">
@@ -46,9 +46,14 @@
 						<nuxt-link class="navbar-item" to="/arrl_affiliation">
 							ARRL Affiliation
 						</nuxt-link>
-						<nuxt-link class="navbar-item" to="/gallery">
+						<a
+							class="navbar-item"
+							href="https://www.flickr.com/photos/copahams/albums"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
 							Gallery
-						</nuxt-link>
+						</a>
 						<a
 							class="navbar-item"
 							href="https://az-mapping.kg6wxc.net/map_display.php#10/33.3004/-111.8233"
@@ -100,14 +105,14 @@ export default {
 	name: "navbar",
 	data() {
 		return {
-			showNavbar: false,
+			showNavbar: false
 		};
 	},
 	methods: {
-		onClickHamburgerMenu: function () {
+		onClickHamburgerMenu: function() {
 			this.showNavbar = !this.showNavbar;
-		},
-	},
+		}
+	}
 };
 </script>
 

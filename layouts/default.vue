@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<div class="hero is-primary is-bold">
+		<div role="banner" class="hero is-primary is-bold">
 			<div class="hero-body">
 				<div class="container">
 					<div class="title">
@@ -15,6 +15,7 @@
 							href="http://facebook.com/copahams"
 							target="_blank"
 							class="social-icon social-icon--facebook"
+							aria-label="MARA Facebook"
 						>
 							<font-awesome-icon :icon="faFacebook" />
 						</a>
@@ -22,6 +23,7 @@
 							href="https://twitter.com/CopaHams"
 							target="_blank"
 							class="social-icon social-icon--twitter"
+							aria-label="MARA Twitter"
 						>
 							<font-awesome-icon :icon="faTwitter" />
 						</a>
@@ -29,6 +31,7 @@
 							href="https://www.instagram.com/copahams/"
 							target="_blank"
 							class="social-icon social-icon--instagram"
+							aria-label="MARA Instagram"
 						>
 							<font-awesome-icon :icon="faInstagram" />
 						</a>
@@ -36,6 +39,7 @@
 							href="https://www.youtube.com/channel/UC1JJQI7fnsLHcuerGbHLJKw"
 							target="_blank"
 							class="social-icon social-icon--youtube"
+							aria-label="MARA Youtube"
 						>
 							<font-awesome-icon :icon="faYoutube" />
 						</a>
@@ -43,6 +47,7 @@
 							href="https://www.flickr.com/photos/copahams/albums"
 							target="_blank"
 							class="social-icon social-icon--flickr"
+							aria-label="MARA Flickr"
 						>
 							<font-awesome-icon :icon="faFlickr" />
 						</a>
@@ -53,7 +58,7 @@
 
 		<navbar />
 
-		<div class="repeaters-container level">
+		<div role="complementary" class="repeaters-container level">
 			<div class="level-item has-text-centered">
 				<div>
 					<p class="heading">CAC Maricopa Campus</p>
@@ -87,9 +92,9 @@
 		</div>
 
 		<!-- main content -->
-    <main>
-		  <nuxt />
-    </main>
+		<main>
+			<nuxt />
+		</main>
 
 		<footer class="footer has-text-centered">
 			<div class="columns">
@@ -143,6 +148,7 @@
 						href="https://github.com/lousando/mara-website"
 						target="_blank"
 						class="github-icon"
+						aria-label="MARA Website Github"
 					>
 						<font-awesome-icon :icon="faGithub" />
 					</a>
@@ -235,11 +241,11 @@ export default {
 }
 
 .repeaters-container {
-  border-bottom: 0.2rem solid gray;
-  padding-bottom: 1rem;
+	border-bottom: 0.2rem solid gray;
+	padding-bottom: 1rem;
 }
 
 main {
-  margin: 1rem;
+	margin: 1rem;
 }
 </style>

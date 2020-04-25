@@ -17,6 +17,8 @@ module.exports = {
   // add your custom rules here
   rules: {
     "prettier/prettier": "warn",
-    "no-console": "warn"
+    "no-console": "warn",
+    "indent": ["warn", "tab"],
+    "require-await": "error"
   }
 };

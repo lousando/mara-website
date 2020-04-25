@@ -9,6 +9,16 @@ $warning: $az-yellow;
 
 @import "~bulma";
 
+/**
+  * Bulma extensions
+ */
+.is-horizontal-center {
+  justify-content: center;
+}
+
+/**
+  * custom
+ */
 
 .square-button {
   cursor: pointer;

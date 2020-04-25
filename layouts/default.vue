@@ -51,6 +51,8 @@
 			</div>
 		</div>
 
+		<navbar />
+
 		<div class="level">
 			<div class="level-item has-text-centered">
 				<div>
@@ -85,7 +87,9 @@
 		</div>
 
 		<!-- main content -->
-		<nuxt />
+    <main>
+		  <nuxt />
+    </main>
 
 		<footer class="footer has-text-centered">
 			<div class="columns">
@@ -158,6 +162,7 @@ import {
 	faYoutube,
 	faFlickr
 } from "@fortawesome/free-brands-svg-icons";
+import navbar from "../components/navbar";
 
 export default {
 	name: "mara-footer",
@@ -172,7 +177,8 @@ export default {
 		};
 	},
 	components: {
-		"font-awesome-icon": FontAwesomeIcon
+		"font-awesome-icon": FontAwesomeIcon,
+		navbar
 	}
 };
 </script>

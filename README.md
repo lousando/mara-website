@@ -1,7 +1,5 @@
 # MARA Website
 
-> MARA Website
-
 ## Build Setup
 
 ``` bash
@@ -20,3 +18,11 @@ $ yarn test
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+
+## ENV Vars
+
+```
+# Google Maps API Key (required)
+NUXT_ENV_GMAPS_API_KEY=""
+```
+

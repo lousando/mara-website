@@ -18,9 +18,9 @@
 				<nuxt-link class="navbar-item" to="/">
 					Home
 				</nuxt-link>
-				<!-- Activities-->
-				<nuxt-link class="navbar-item" to="/activities">
-					Activities
+				<!-- Meetings-->
+				<nuxt-link class="navbar-item" to="/meetings">
+					Meetings
 				</nuxt-link>
 				<!-- Club Resources -->
 				<div class="navbar-item has-dropdown is-hoverable">

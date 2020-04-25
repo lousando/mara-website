@@ -53,7 +53,7 @@
 
 		<navbar />
 
-		<div class="level">
+		<div class="repeaters-container level">
 			<div class="level-item has-text-centered">
 				<div>
 					<p class="heading">CAC Maricopa Campus</p>
@@ -232,5 +232,14 @@ export default {
 	&--flickr {
 		@include social-icon-colors(#0063db);
 	}
+}
+
+.repeaters-container {
+  border-bottom: 0.2rem solid gray;
+  padding-bottom: 1rem;
+}
+
+main {
+  margin: 1rem;
 }
 </style>

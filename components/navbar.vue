@@ -54,6 +54,11 @@
 							rel="noopener noreferrer"
 						>
 							Gallery
+							<span class="spacer"></span>
+							<font-awesome-icon
+								:icon="faExternalLinkAlt"
+								class="icon"
+							/>
 						</a>
 						<a
 							class="navbar-item"
@@ -62,6 +67,11 @@
 							rel="noopener noreferrer"
 						>
 							AZ AREDN Map
+							<span class="spacer"></span>
+							<font-awesome-icon
+								:icon="faExternalLinkAlt"
+								class="icon"
+							/>
 						</a>
 					</div>
 				</div>
@@ -77,6 +87,11 @@
 							target="_blank"
 						>
 							CopaFest
+							<span class="spacer"></span>
+							<font-awesome-icon
+								:icon="faExternalLinkAlt"
+								class="icon"
+							/>
 						</a>
 						<a
 							class="navbar-item"
@@ -85,6 +100,11 @@
 							rel="noopener noreferrer"
 						>
 							AZ Hamfests
+							<span class="spacer"></span>
+							<font-awesome-icon
+								:icon="faExternalLinkAlt"
+								class="icon"
+							/>
 						</a>
 					</div>
 				</div>
@@ -102,12 +122,19 @@
 </template>
 
 <script>
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
+
 export default {
 	name: "navbar",
 	data() {
 		return {
-			showNavbar: false
+			showNavbar: false,
+			faExternalLinkAlt
 		};
+	},
+	components: {
+		"font-awesome-icon": FontAwesomeIcon
 	},
 	methods: {
 		onClickHamburgerMenu: function() {
@@ -121,6 +148,10 @@ export default {
 nav {
 	top: 0;
 	position: sticky;
+}
+
+.spacer {
+	width: 0.5rem;
 }
 
 .havbar-link {

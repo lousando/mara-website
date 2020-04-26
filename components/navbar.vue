@@ -66,7 +66,7 @@
 				</div>
 				<!-- Events-->
 				<div class="navbar-item has-dropdown is-hoverable">
-					<span class="navbar-link" to="/events">
+					<span class="navbar-link">
 						Events
 					</span>
 					<div class="navbar-dropdown is-boxed">

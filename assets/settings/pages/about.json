@@ -3,17 +3,22 @@
     {
       "name": "Curt Steger",
       "call_sign": "NA7CS",
-      "role": "President"
+      "role": "President",
+      "image_src": "/imgs/officers/na7cs.jpg",
+      "bio": "I have always been interested in electronics and radio. As such, I started building kits from Heathkit beginning with their crystal radio at the age of 8. The last kit I built from Heathkit was with my dad and it was their color TV with remote in the mid 70's. That was our family's first color TV and it lasted well into the 90's when my dad finally sold it.\n\nEven though I have a modern station (Kenwood TM-480HX and the TigerTronics interface) I really enjoy running the old gear. AKA boat anchors. I restored a Yaesu FT-101E, FL2100F and FTV-650B and put them on the air regularly. I also restored a Drake TR4 with the RV4 & DD-103.\n\nI run three repeaters from my shack, all are Motorola UHF GR1225's. One is on 449.800 -5Mhz, PL 110.9 running Echolink (Node 885610). The second amateur repeater is on 448.525 -5Mhz, PL 100.0 connected to the AllStar Network. My last GR1225 is my GMRS repeater on 462.650 +5Mhz DPL 315 which is open to all licensed GMRS operators.\n\nAlso in the works is an on-demand link from one of my 70cm repeaters (or possible EchoLink) to 10M FM.\n\u200B\nDrop in via EchoLink, AllStar. Or on either repeater when in the area and say, \"Howdy.\""
     },
     {
       "name": "Bob Proctor",
       "call_sign": "N6YPE",
-      "role": "Secretary"
+      "role": "Secretary",
+      "image_src": "/imgs/officers/n6ype.jpg",
+      "bio": "I was Elmered by K9MLD, Joel, in Wisconsin (now MI), and WB6AKI, Roque (Rocky), in California (now OK). My hometown is Fremont, CA, where I was first licensed in 1989. I moved to Minnesota in 1991 but never got used to the cold weather, later moved to North Carolina in summer of 2007. XYL is Cathy, she doesn't care for radio, but tolerates a little \"RF noise\" from my office/shack. I have CCR restrictions here, but hope to have a stealth HF antennas soon at the house. I have HF/VHF/UHF working in the car. Occasionally go bicycle mobile on 144/440 MHz. Work at a microcontroller company as an application engineer, mostly motor control stuff. Over the years, did lots of work with EMI/RFI, a skill that still comes in handy. Besides ham radio and bicycling, other hobbies include kayaking, fishing, astronomy, robotics and hiking."
     },
     {
-      "name": "George",
-      "call_sign": "",
-      "role": "Treasurer"
+      "name": "George Hogan",
+      "call_sign": "K7GTH",
+      "role": "Treasurer",
+      "image_src": ""
     }
   ],
   "board_members": [

@@ -1,10 +1,14 @@
 <template>
 	<div>
+		<navbar />
+
 		<div role="banner" class="hero is-primary is-bold">
 			<div class="hero-body">
 				<div class="container">
 					<div class="title">
-						Maricopa Amateur Radio Association
+						<nuxt-link class="has-text-white" to="/">
+							Maricopa Amateur Radio Association
+						</nuxt-link>
 					</div>
 					<div class="subtitle">
 						A 501(c)(3) nonprofit corporation
@@ -55,8 +59,6 @@
 				</div>
 			</div>
 		</div>
-
-		<navbar />
 
 		<div role="complementary" class="repeaters-container level">
 			<div class="level-item has-text-centered">

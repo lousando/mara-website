@@ -1,6 +1,11 @@
 <template>
 	<nav class="navbar is-dark" role="navigation">
 		<div class="navbar-brand">
+			<!-- Home -->
+			<nuxt-link class="navbar-item" to="/">
+				CopaHams
+			</nuxt-link>
+			<!-- Burger -->
 			<div class="navbar-burger" @click="onClickHamburgerMenu">
 				<span aria-hidden="true"></span>
 				<span aria-hidden="true"></span>
@@ -14,10 +19,6 @@
 			}"
 		>
 			<div class="navbar-start">
-				<!-- Home -->
-				<nuxt-link class="navbar-item" to="/">
-					Home
-				</nuxt-link>
 				<!-- Meetings-->
 				<nuxt-link class="navbar-item" to="/meetings">
 					Meetings
@@ -120,7 +121,6 @@ export default {
 nav {
 	top: 0;
 	position: sticky;
-	margin-bottom: 1rem;
 }
 
 .havbar-link {

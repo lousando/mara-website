@@ -17,8 +17,7 @@
     {
       "name": "George Hogan",
       "call_sign": "K7GTH",
-      "role": "Treasurer",
-      "image_src": ""
+      "role": "Treasurer"
     }
   ],
   "board_members": [
@@ -41,6 +40,88 @@
     {
       "name": "Glenn Cline",
       "call_sign": "KG2LF"
+    }
+  ],
+  "ve_team": [
+    {
+      "name": "Bob Howard",
+      "call_sign": "W8RH"
+    },
+    {
+      "name": "Chris Canevit",
+      "call_sign": "W7CGC"
+    },
+    {
+      "name": "Johnathan Wiltberger",
+      "call_sign": "NO7IN"
+    },
+    {
+      "name": "Steve Miller",
+      "call_sign": "W6SDM"
+    },
+    {
+      "name": "Joshua Babb",
+      "call_sign": "W7JAB"
+    },
+    {
+      "name": "James Charboneau",
+      "call_sign": "KC1BB"
+    },
+    {
+      "name": "David French",
+      "call_sign": "N7FAN"
+    },
+    {
+      "name": "McKay Monson",
+      "call_sign": "AC7CA"
+    },
+    {
+      "name": "Timothy Grant",
+      "call_sign": "W7TGG"
+    },
+    {
+      "name": "Paul Ellis",
+      "call_sign": "W7MA"
+    },
+    {
+      "name": "Norman Fasoletos",
+      "call_sign": "K7NWF"
+    },
+    {
+      "name": "Nathan Moore",
+      "call_sign": "K7NDM"
+    },
+    {
+      "name": "Bob Beltz",
+      "call_sign": "N7GW"
+    },
+    {
+      "name": "Ron Mc Kee",
+      "call_sign": "AJ7T"
+    },
+    {
+      "name": "Scott Bushman",
+      "call_sign": "WI7Y"
+    },
+    {
+      "name": "Curt Steger",
+      "call_sign": "NA7CS"
+    },
+    {
+      "name": "Bill Beare",
+      "call_sign": "K7WSB"
+    },
+    {
+      "name": "Chris Butler",
+      "call_sign": "KF7TUP"
+    },
+    {
+      "name": "James Parkinson",
+      "call_sign": "KB8HEL"
+    },
+    {
+      "name": "Arthur Swander",
+      "call_sign": "AD7EM"
     }
   ]
 }

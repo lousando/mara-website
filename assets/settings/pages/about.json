@@ -1,0 +1,41 @@
+{
+  "officers": [
+    {
+      "name": "Curt Steger",
+      "call_sign": "NA7CS",
+      "role": "President"
+    },
+    {
+      "name": "Bob Proctor",
+      "call_sign": "N6YPE",
+      "role": "Secretary"
+    },
+    {
+      "name": "George",
+      "call_sign": "",
+      "role": "Treasurer"
+    }
+  ],
+  "board_members": [
+    {
+      "name": "Bob Howard",
+      "call_sign": "W8RH"
+    },
+    {
+      "name": "Scott Bushman",
+      "call_sign": "WI7Y"
+    },
+    {
+      "name": "Louis Sandoval",
+      "call_sign": "W8LES"
+    },
+    {
+      "name": "Joshua Babb",
+      "call_sign": "W7JAB"
+    },
+    {
+      "name": "Glenn Cline",
+      "call_sign": "KG2LF"
+    }
+  ]
+}

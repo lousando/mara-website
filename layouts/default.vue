@@ -254,6 +254,10 @@ export default {
 	padding-bottom: 1rem;
 }
 
+main {
+  padding-bottom: 1rem;
+}
+
 footer {
 	border-top: 1px solid black;
 }

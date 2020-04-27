@@ -6,6 +6,14 @@ $az-yellow: #F2B705;
 $primary: $az-blue;
 $danger: $az-red;
 $warning: $az-yellow;
+$info: lighten($az-blue, 25%);
+
+$body-background-color: black;
+
+$text: black; // box text
+$scheme-main: whitesmoke; // box
+$scheme-main-bis: black; // footer
+$footer-color: white;
 
 @import "~bulma";
 
@@ -24,13 +32,7 @@ $warning: $az-yellow;
   background-blend-mode: hard-light;
   background-color: rgba(25, 25, 180, 1);
   color: white;
-  text-shadow: 2px 2px 2px black;
-  height: 70vh;
-}
-
-body, .footer {
-  background-color: black;
-  color: white;
+  text-shadow: 3px 3px 5px black;
 }
 
 /**

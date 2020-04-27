@@ -62,22 +62,17 @@
 				<div class="container">
 					<div class="columns">
 						<div
-							class="column has-text-centered"
+							class="column has-text-centered repeater-entry"
 							v-for="repeater in settings.repeaters"
 							:key="repeater.rx_freq"
 						>
 							<div
 								class="is-size-5"
-								v-if="repeater.is_club_repeater"
+								v-if="!repeater.is_club_repeater"
 							>
-								Club Repeater:
-							</div>
-							<div class="is-size-5" v-else>
 								Hosted Repeater:
 							</div>
-
-							<div>
-								<span class="has-text-weight-bold">QTH:</span>
+							<div class="is-size-5" v-else>
 								{{ repeater.qth }}
 							</div>
 							<div>
@@ -203,7 +198,7 @@ export default {
 }
 
 .github-icon {
-	color: black;
+	color: white;
 	font-size: 2.2rem;
 }
 

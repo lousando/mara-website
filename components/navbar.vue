@@ -1,5 +1,5 @@
 <template>
-	<nav class="navbar is-dark" role="navigation">
+	<nav class="navbar is-black" role="navigation">
 		<div class="navbar-brand">
 			<!-- Home -->
 			<nuxt-link class="navbar-item" to="/">

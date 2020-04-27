@@ -3,7 +3,7 @@
 		<!-- Officers -->
 		<div class="columns">
 			<div class="column">
-				<h1 id="officers" class="is-size-1 has-text-white">
+				<h1 id="officers" class="is-size-1 has-text-white has-text-centered">
 					Officers
 				</h1>
 				<div
@@ -41,7 +41,7 @@
 		<!-- Board Members -->
 		<div class="columns">
 			<div class="column">
-				<h1 id="board-members" class="is-size-1 has-text-white">
+				<h1 id="board-members" class="is-size-1 has-text-white has-text-centered">
 					Board Members
 				</h1>
 				<div class="box">
@@ -86,7 +86,7 @@
 		<!-- VE Team -->
 		<div class="columns">
 			<div class="column">
-				<h1 id="ve-team" class="is-size-1 has-text-white">
+				<h1 id="ve-team" class="is-size-1 has-text-white has-text-centered">
 					Volunteer Examiner Team
 				</h1>
 				<div class="box">

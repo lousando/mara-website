@@ -26,7 +26,7 @@
 					<iframe
 						class="map"
 						:src="
-							`https://www.google.com/maps/embed/v1/place?q=place_id:ChIJI1lYm8r6KocRi7Y4CVcrcP0&key=AIzaSyBZYQ5IC9n_e4UYRQJWHdFdl5c-1kc2078&zoom=16&maptype=satellite&key=${NUXT_ENV_GMAPS_API_KEY}`
+							`https://www.google.com/maps/embed/v1/place?q=place_id:ChIJI1lYm8r6KocRi7Y4CVcrcP0&zoom=16&maptype=satellite&key=${NUXT_ENV_GMAPS_API_KEY}`
 						"
 						allowfullscreen
 					></iframe>

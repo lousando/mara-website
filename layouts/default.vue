@@ -107,9 +107,28 @@
 		<footer class="footer has-text-centered">
 			<div class="columns">
 				<div class="column">
-					<p
-						v-html="this.$store.state.globalSettings.donation_pitch"
-					/>
+					<h5 class="is-size-5">Ways to help</h5>
+				</div>
+			</div>
+			<div class="columns">
+				<div class="column">
+					<div class="content">
+						<p>
+							{{ settings.amazon_smile_pitch }}
+						</p>
+					</div>
+					<a
+						href="https://smile.amazon.com/ch/46-2297818"
+						target="_blank"
+						rel="noreferrer noopener"
+					>
+						<button type="button" class="button is-primary">
+							Register with Amazon Smile
+						</button>
+					</a>
+				</div>
+				<div class="column">
+					<p v-html="settings.donation_pitch" />
 					<form
 						action="https://www.paypal.com/cgi-bin/webscr"
 						method="post"
@@ -128,6 +147,22 @@
 							Donate
 						</button>
 					</form>
+				</div>
+				<div class="column">
+					<div class="content">
+						<p>
+							{{ settings.frys_food_pitch }}
+						</p>
+					</div>
+					<a
+						href="https://www.frysfood.com/account/communityrewards"
+						target="_blank"
+						rel="noreferrer noopener"
+					>
+						<button type="button" class="button is-primary">
+							Register with Fry's Food
+						</button>
+					</a>
 				</div>
 			</div>
 			<div class="columns has-text-center">
@@ -182,7 +217,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .hero-body {
 	background-image: url("/imgs/mara_logo.svg");
 	background-size: 200px 200px;

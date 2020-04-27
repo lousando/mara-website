@@ -1,12 +1,12 @@
 <template>
 	<section>
-    <div class="columns">
-      <div class="column has-text-centered">
-        <h1 class="is-size-1 has-text-white">
-          Contact Us
-        </h1>
-      </div>
-    </div>
+		<div class="columns">
+			<div class="column has-text-centered">
+				<h1 class="is-size-1 has-text-white">
+					Contact Us
+				</h1>
+			</div>
+		</div>
 		<div class="box">
 			<div class="columns has-text-centered">
 				<div class="column">
@@ -132,8 +132,6 @@ export default {
 	name: "contact",
 	data() {
 		return {
-			mara_inquiry_email: this.$store.state.globalSettings
-				.mara_inquiry_email,
 			firstName: "",
 			lastName: "",
 			phone: "",

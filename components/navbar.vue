@@ -6,7 +6,14 @@
 				CopaHams
 			</nuxt-link>
 			<!-- Burger -->
-			<div class="navbar-burger" @click="onClickHamburgerMenu">
+			<div
+        role="button"
+				:class="{
+					'navbar-burger': true,
+					'is-active': this.$store.state.showNavbar
+				}"
+				@click="onClickHamburgerMenu"
+			>
 				<span aria-hidden="true"></span>
 				<span aria-hidden="true"></span>
 				<span aria-hidden="true"></span>
@@ -15,7 +22,7 @@
 		<div
 			:class="{
 				'navbar-menu': true,
-				'is-active': this.showNavbar
+				'is-active': this.$store.state.showNavbar
 			}"
 		>
 			<div class="navbar-start">
@@ -138,7 +145,7 @@ export default {
 	},
 	methods: {
 		onClickHamburgerMenu: function() {
-			this.showNavbar = !this.showNavbar;
+			this.$store.commit("toggleNavbar");
 		}
 	}
 };

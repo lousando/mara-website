@@ -2,8 +2,8 @@
 	<div>
 		<navbar />
 
-		<div role="banner" class="hero is-primary is-bold">
-			<div class="hero-body">
+		<div class="hero is-primary is-bold">
+			<div class="hero-body" role="banner">
 				<div class="container">
 					<div class="title">
 						<nuxt-link class="has-text-white" to="/">
@@ -58,43 +58,54 @@
 					</div>
 				</div>
 			</div>
-		</div>
+			<div class="hero-foot" role="complementary">
+				<div class="container">
+					<div class="columns">
+						<div
+							class="column has-text-centered"
+							v-for="repeater in settings.repeaters"
+							:key="repeater.rx_freq"
+						>
+							<div
+								class="is-size-5"
+								v-if="repeater.is_club_repeater"
+							>
+								Club Repeater:
+							</div>
+							<div class="is-size-5" v-else>
+								Hosted Repeater:
+							</div>
 
-		<div role="complementary" class="repeaters-container level">
-			<div class="level-item has-text-centered">
-				<div>
-					<p class="heading">CAC Maricopa Campus</p>
-					<div>145.210 -600KHz, PL 162.2</div>
-					<div>449.125 -5MHz, PL 136.5</div>
-					<div class="is-italic">Parrot Feature using DMTF 9999</div>
-					<div class="has-text-weight-bold">Weekly Net:</div>
-					<div>
-						Every Monday Night @ 8:00pm MST (03:00 UTC)
-					</div>
-				</div>
-			</div>
-			<div class="level-item has-text-centered">
-				<div>
-					<p class="heading">Thunderbird Farms</p>
-					<p>446.300 -5MHz, PL 100.0</p>
-				</div>
-			</div>
-			<div class="level-item has-text-centered">
-				<div>
-					<div class="heading">Wires X Fusion Repeater</div>
-					<div>146.780 -600Khz, PL 100.0</div>
-					<div>Wires X Node 18445/Room 28445</div>
-					<div>Auto/Auto Mode</div>
-					<div class="has-text-weight-bold">Weekly Net:</div>
-					<div>
-						Every Wednesday Night @ 7:00pm MST (02:00 UTC)
+							<div>
+								<span class="has-text-weight-bold">QTH:</span>
+								{{ repeater.qth }}
+							</div>
+							<div>
+								<span class="has-text-weight-bold">RX:</span>
+								{{ repeater.rx_freq }},
+								<span class="has-text-weight-bold"
+									>Offset:</span
+								>
+								{{ repeater.offset }},
+								<span class="has-text-weight-bold">PL:</span>
+								{{ repeater.pl_tone }}
+							</div>
+							<div v-if="repeater.net">
+								<span class="has-text-weight-bold">Net:</span>
+								{{ repeater.net }}
+							</div>
+							<div
+								class="is-italic"
+								v-text="repeater.extra_info"
+							/>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 
 		<!-- main content -->
-		<main>
+		<main class="container">
 			<nuxt />
 		</main>
 
@@ -124,23 +135,6 @@
 					</form>
 				</div>
 			</div>
-			<div class="columns has-text-centered">
-				<div class="column">
-					<div class="content">
-						<p>
-							Maricopa Amateur Radio Association is a 501(c)(3)
-							non-profit corporation.
-						</p>
-					</div>
-					<a href="/" rel="noopener">
-						<img
-							class="mara-logo is-rounded"
-							src="imgs/mara_logo.svg"
-							alt="MARA Logo"
-						/>
-					</a>
-				</div>
-			</div>
 			<div class="columns has-text-center">
 				<div class="column">
 					<div>
@@ -161,7 +155,9 @@
 </template>
 
 <script>
+import defaultLayoutSettings from "../assets/settings/layout/default.json";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import {
 	faGithub,
 	faFacebook,
@@ -176,6 +172,8 @@ export default {
 	name: "mara-footer",
 	data() {
 		return {
+			settings: defaultLayoutSettings,
+			faInfoCircle,
 			faGithub,
 			faFacebook,
 			faTwitter,
@@ -192,9 +190,18 @@ export default {
 </script>
 
 <style lang="scss">
-.mara-logo {
-	width: 14rem;
-	height: 14rem;
+.hero-body {
+	background-image: url("/imgs/mara_logo.svg");
+	background-size: 200px 200px;
+	background-repeat: no-repeat;
+	padding-left: 200px;
+
+	@media (max-width: 699px) {
+		& {
+			background-image: none;
+			padding-left: 0;
+		}
+	}
 }
 
 .github-icon {
@@ -247,7 +254,7 @@ export default {
 	padding-bottom: 1rem;
 }
 
-main {
-	margin: 1rem;
+footer {
+	border-top: 1px solid black;
 }
 </style>

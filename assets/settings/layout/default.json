@@ -1,0 +1,38 @@
+{
+  "repeaters": [
+    {
+      "is_club_repeater": true,
+      "rx_freq": "145.210",
+      "offset": "-600KHz",
+      "pl_tone": "162.2",
+      "qth": "CAC Maricopa Campus",
+      "net": "Every Monday @ 8:00pm MST",
+      "extra_info": "Parrot Feature using DMTF 9999"
+    },
+    {
+      "is_club_repeater": true,
+      "rx_freq": "449.125",
+      "offset": "-5MHz",
+      "pl_tone": "136.5",
+      "qth": "CAC Maricopa Campus",
+      "net": "Every Monday @ 8:00pm MST",
+      "extra_info": "Parrot Feature using DMTF 9999"
+    },
+    {
+      "is_club_repeater": true,
+      "rx_freq": "446.300",
+      "offset": "-5MHz",
+      "pl_tone": "100.0",
+      "qth": "Thunderbird Farms"
+    },
+    {
+      "is_club_repeater": false,
+      "rx_freq": "146.780",
+      "offset": "-600KHz",
+      "pl_tone": "100.0",
+      "qth": "CAC Maricopa Campus",
+      "net": "Every Wednesday @ 7:00pm MST",
+      "extra_info": "Wires X Node 18445/Room 28445, Auto/Auto Mode"
+    }
+  ]
+}

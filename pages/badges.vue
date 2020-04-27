@@ -1,11 +1,15 @@
 <template>
 	<section class="has-text-centered">
+    <div class="columns">
+      <div class="column">
+        <h1 class="is-size-1 has-text-white">
+          Badge Ordering
+        </h1>
+      </div>
+    </div>
 		<div class="box">
 			<div class="columns">
 				<div class="column">
-					<h1 class="is-size-1">
-						Badge Ordering
-					</h1>
 					<div>
 						{{ settings.main_text }}
 					</div>
@@ -26,7 +30,7 @@
 						target="_blank"
 						rel="noreferrer noopener"
 					>
-						<button class="button">
+						<button class="button is-primary">
 							Order 2 Line Badge
 						</button>
 					</a>
@@ -45,7 +49,7 @@
 						target="_blank"
 						rel="noreferrer noopener"
 					>
-						<button class="button">
+						<button class="button is-primary">
 							Order 3 Line Badge
 						</button>
 					</a>

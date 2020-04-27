@@ -1,13 +1,13 @@
 <template>
 	<section class="has-text-centered">
+    <div class="columns">
+      <div class="column">
+        <h1 class="is-size-1 has-text-white">
+          Annual Membership
+        </h1>
+      </div>
+    </div>
 		<div class="box">
-			<div class="columns">
-				<div class="column">
-					<h1 class="is-size-1">
-						Annual Membership
-					</h1>
-				</div>
-			</div>
 			<div class="columns">
 				<div class="column">
 					<p>

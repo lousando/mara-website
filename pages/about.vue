@@ -3,7 +3,7 @@
 		<!-- Officers -->
 		<div class="columns">
 			<div class="column">
-				<h1 id="officers" class="is-size-1">
+				<h1 id="officers" class="is-size-1 has-text-white">
 					Officers
 				</h1>
 				<div
@@ -40,37 +40,41 @@
 		<!-- Board Members -->
 		<div class="columns">
 			<div class="column">
-				<h1 id="board-members" class="is-size-1">
+				<h1 id="board-members" class="is-size-1 has-text-white">
 					Board Members
 				</h1>
-				<div class="board-members-container">
-					<div
-						class="card"
-						v-for="member in settings.board_members"
-						:key="member.call_sign"
-					>
-						<div class="card-content">
-							<div class="media">
-								<div class="media-left" v-if="member.image_src">
-									<figure class="image is-128x128">
-										<img
-											:src="member.image_src"
-											:alt="'photo of ' + member.name"
-										/>
-									</figure>
-								</div>
-								<div class="media-content">
-									<div class="title is-4">
-										{{ member.name }},
-										{{ member.call_sign }}
+				<div class="box">
+					<div class="board-members-container">
+						<div
+							v-for="member in settings.board_members"
+							:key="member.call_sign"
+						>
+							<div class="card-content">
+								<div class="media">
+									<div
+										class="media-left"
+										v-if="member.image_src"
+									>
+										<figure class="image is-128x128">
+											<img
+												:src="member.image_src"
+												:alt="'photo of ' + member.name"
+											/>
+										</figure>
 									</div>
-									<div class="subtitle is-6">
-										Board member
+									<div class="media-content">
+										<div class="title is-4">
+											{{ member.name }},
+											{{ member.call_sign }}
+										</div>
+										<div class="subtitle is-6">
+											Board member
+										</div>
 									</div>
 								</div>
-							</div>
-							<div class="content">
-								{{ member.bio }}
+								<div class="content">
+									{{ member.bio }}
+								</div>
 							</div>
 						</div>
 					</div>
@@ -80,32 +84,30 @@
 		<!-- VE Team -->
 		<div class="columns">
 			<div class="column">
-				<h1 id="ve-team" class="is-size-1">
+				<h1 id="ve-team" class="is-size-1 has-text-white">
 					Volunteer Examiner Team
 				</h1>
-				<div class="ve-container">
-					<div
-						class="card"
-						v-for="ve in settings.ve_team"
-						:key="ve.call_sign"
-					>
-						<div class="card-content">
-							<div class="media">
-								<div class="media-left" v-if="ve.image_src">
-									<figure class="image is-128x128">
-										<img
-											:src="ve.image_src"
-											:alt="'photo of ' + ve.name"
-										/>
-									</figure>
-								</div>
-								<div class="media-content">
-									<div class="title is-4">
-										{{ ve.name }},
-										{{ ve.call_sign }}
+				<div class="box">
+					<div class="ve-container">
+						<div v-for="ve in settings.ve_team" :key="ve.call_sign">
+							<div class="card-content">
+								<div class="media">
+									<div class="media-left" v-if="ve.image_src">
+										<figure class="image is-128x128">
+											<img
+												:src="ve.image_src"
+												:alt="'photo of ' + ve.name"
+											/>
+										</figure>
 									</div>
-									<div class="subtitle is-6">
-										Volunteer Examiner
+									<div class="media-content">
+										<div class="title is-4">
+											{{ ve.name }},
+											{{ ve.call_sign }}
+										</div>
+										<div class="subtitle is-6">
+											Volunteer Examiner
+										</div>
 									</div>
 								</div>
 							</div>
@@ -158,6 +160,6 @@ function _addImgSrc(member) {
 .ve-container {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	justify-content: space-around;
 }
 </style>

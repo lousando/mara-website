@@ -1,11 +1,11 @@
 <template>
 	<section class="has-text-centered">
-		<div class="box">
-			<div class="columns">
-				<div class="column">
-					<h1 class="is-size-1">ARRL Club Charter</h1>
-				</div>
+		<div class="columns">
+			<div class="column">
+				<h1 class="is-size-1 has-text-white">ARRL Club Charter</h1>
 			</div>
+		</div>
+		<div class="box">
 			<div class="columns">
 				<div class="column">
 					<img

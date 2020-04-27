@@ -2,12 +2,18 @@
 	<section class="has-text-centered">
 		<div class="columns">
 			<div class="column">
+				<h1 class="is-size-1 has-text-white">
+					Join our mailing list!
+				</h1>
+			</div>
+		</div>
+		<div class="columns">
+			<div class="column">
 				<div class="box">
-					<h1 class="is-size-1">
-						Join our mailing list!
-					</h1>
-					<div>
-						{{ settings.main_text }}
+					<div class="content">
+						<p>
+							{{ settings.main_text }}
+						</p>
 					</div>
 					<div>
 						<a

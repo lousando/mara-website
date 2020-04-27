@@ -2,11 +2,9 @@
 	<section class="has-text-centered">
 		<div class="columns">
 			<div class="column">
-				<div class="box">
-					<h1 class="is-size-1">
-						Meetings
-					</h1>
-				</div>
+				<h1 class="is-size-1 has-text-white">
+					Meetings
+				</h1>
 			</div>
 		</div>
 		<div class="columns">

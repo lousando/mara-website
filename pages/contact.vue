@@ -9,6 +9,12 @@
 					<h2 class="is-size-2">
 						Feel free to reach out.
 					</h2>
+					<info-notification>
+						​{{
+							this.$store.state.globalSettings
+								.ve_testing_notification_text
+						}}
+					</info-notification>
 				</div>
 			</div>
 			<div class="columns">
@@ -119,6 +125,8 @@
 </template>
 
 <script>
+import infoNotification from "../components/info-notification";
+
 export default {
 	name: "contact",
 	data() {
@@ -131,6 +139,9 @@ export default {
 			reason: "",
 			message: ""
 		};
+	},
+	components: {
+		infoNotification
 	},
 	methods: {
 		onClickSubmit: function() {

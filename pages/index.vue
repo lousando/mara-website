@@ -35,14 +35,12 @@
 							>Click here to check the calendar.</a
 						>
 					</p>
-					<div class="notification is-info has-text-centered">
-						<font-awesome-icon
-							:icon="faInfoCircle"
-							class="icon is-small"
-						/>
-						VE Testing is available at all MARA Meetings. Just let
-						us know in advance so we can bring the materials.
-					</div>
+					<info-notification>
+						​{{
+							this.$store.state.globalSettings
+								.ve_testing_notification_text
+						}}
+					</info-notification>
 				</div>
 			</div>
 		</div>
@@ -50,18 +48,11 @@
 </template>
 
 <script>
-import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
+import infoNotification from "../components/info-notification";
 
 export default {
-	components: {},
-	data() {
-		return {
-			faInfoCircle
-		};
-	},
 	components: {
-		"font-awesome-icon": FontAwesomeIcon
+		infoNotification
 	}
 };
 </script>

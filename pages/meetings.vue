@@ -6,9 +6,12 @@
 					<div class="content">
 						<p>{{ settings.main_text }}</p>
 					</div>
-					<div class="notification is-info">
-						​{{ settings.ve_testing_notification_text }}
-					</div>
+					<info-notification>
+						​{{
+							this.$store.state.globalSettings
+								.ve_testing_notification_text
+						}}
+					</info-notification>
 				</div>
 			</div>
 			<div class="column">
@@ -39,6 +42,7 @@
 
 <script>
 import meetingSettings from "../assets/settings/pages/meetings.json";
+import infoNotification from "../components/info-notification";
 
 export default {
 	name: "activities",
@@ -47,6 +51,9 @@ export default {
 			NUXT_ENV_GMAPS_API_KEY: process.env.NUXT_ENV_GMAPS_API_KEY,
 			settings: meetingSettings
 		};
+	},
+	components: {
+		infoNotification
 	}
 };
 </script>

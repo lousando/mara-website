@@ -157,7 +157,6 @@
 <script>
 import defaultLayoutSettings from "../assets/settings/layout/default.json";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import {
 	faGithub,
 	faFacebook,
@@ -173,7 +172,6 @@ export default {
 	data() {
 		return {
 			settings: defaultLayoutSettings,
-			faInfoCircle,
 			faGithub,
 			faFacebook,
 			faTwitter,

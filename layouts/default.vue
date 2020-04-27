@@ -3,6 +3,13 @@
 		<navbar />
 
 		<div id="main-hero" class="hero">
+			<div class="banner-background-container">
+				<img
+					class="banner-background-container__image"
+					src="/imgs/antenna.jpg"
+					alt="antenna image"
+				/>
+			</div>
 			<div class="hero-body" role="banner">
 				<div class="container">
 					<div class="title">
@@ -60,9 +67,9 @@
 			</div>
 			<div class="hero-foot" role="complementary">
 				<div class="container">
-					<div class="columns">
+					<div class="columns repeater-container">
 						<div
-							class="column has-text-centered repeater-entry"
+							class="column has-text-centered repeater-container__entry"
 							v-for="repeater in settings.repeaters"
 							:key="repeater.rx_freq"
 						>
@@ -232,6 +239,22 @@ export default {
 	}
 }
 
+#main-hero {
+	color: white;
+	text-shadow: 3px 3px 5px black;
+}
+
+.banner-background-container {
+	background: linear-gradient(to bottom, rgba(25, 25, 180, 1), transparent);
+	position: absolute;
+	transform: translateY(-10%);
+	z-index: -1;
+
+	&__image {
+		mix-blend-mode: hard-light;
+	}
+}
+
 .github-icon {
 	color: white;
 	font-size: 2.2rem;
@@ -277,9 +300,10 @@ export default {
 	}
 }
 
-.repeaters-container {
-	border-bottom: 0.2rem solid gray;
-	padding-bottom: 1rem;
+.repeater-container {
+	&__entry {
+		background-color: rgba(0, 0, 0, 0.4);
+	}
 }
 
 main {

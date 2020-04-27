@@ -1,53 +1,55 @@
 <template>
 	<section class="has-text-centered">
-		<div class="columns">
-			<div class="column">
-				<h1 class="is-size-1">
-					Badge Ordering
-				</h1>
-				<div>
-					{{ settings.main_text }}
+		<div class="box">
+			<div class="columns">
+				<div class="column">
+					<h1 class="is-size-1">
+						Badge Ordering
+					</h1>
+					<div>
+						{{ settings.main_text }}
+					</div>
 				</div>
 			</div>
-		</div>
-		<div class="columns has-text-centered">
-			<div class="column">
-				<div class="is-flex is-horizontal-center">
-					<figure class="image is-128x128">
-						<img
-							src="https://thesignman.com/pix/maricopa2l.jpg"
-							alt="2 Line Badge"
-						/>
-					</figure>
+			<div class="columns has-text-centered">
+				<div class="column">
+					<div class="is-flex is-horizontal-center">
+						<figure class="image is-128x128">
+							<img
+								src="https://thesignman.com/pix/maricopa2l.jpg"
+								alt="2 Line Badge"
+							/>
+						</figure>
+					</div>
+					<a
+						href="https://thesignman.com/clubs/maricopa2lcart.html"
+						target="_blank"
+						rel="noreferrer noopener"
+					>
+						<button class="button">
+							Order 2 Line Badge
+						</button>
+					</a>
 				</div>
-				<a
-					href="https://thesignman.com/clubs/maricopa2lcart.html"
-					target="_blank"
-					rel="noreferrer noopener"
-				>
-					<button class="button">
-						Order 2 Line Badge
-					</button>
-				</a>
-			</div>
-			<div class="column">
-				<div class="is-flex is-horizontal-center">
-					<figure class="image is-128x128">
-						<img
-							src="https://thesignman.com/pix/maricopa3l.jpg"
-							alt="3 Line Badge"
-						/>
-					</figure>
+				<div class="column">
+					<div class="is-flex is-horizontal-center">
+						<figure class="image is-128x128">
+							<img
+								src="https://thesignman.com/pix/maricopa3l.jpg"
+								alt="3 Line Badge"
+							/>
+						</figure>
+					</div>
+					<a
+						href="https://thesignman.com/clubs/maricopa3lcart.html"
+						target="_blank"
+						rel="noreferrer noopener"
+					>
+						<button class="button">
+							Order 3 Line Badge
+						</button>
+					</a>
 				</div>
-				<a
-					href="https://thesignman.com/clubs/maricopa3lcart.html"
-					target="_blank"
-					rel="noreferrer noopener"
-				>
-					<button class="button">
-						Order 3 Line Badge
-					</button>
-				</a>
 			</div>
 		</div>
 	</section>

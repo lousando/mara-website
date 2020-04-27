@@ -27,6 +27,7 @@ export default {
 
 <style scoped>
 .club-charter-certificate {
-	max-width: 800px;
+  width: 800px;
+  max-width: 100%;
 }
 </style>

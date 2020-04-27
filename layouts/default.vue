@@ -69,9 +69,13 @@
 				<div class="container">
 					<div class="columns repeater-container">
 						<div
-							class="column has-text-centered repeater-container__entry"
 							v-for="repeater in settings.repeaters"
 							:key="repeater.rx_freq"
+							:class="{
+								column: true,
+								'has-text-centered': true,
+								'repeater-container__entry': true
+							}"
 						>
 							<div
 								class="is-size-5"

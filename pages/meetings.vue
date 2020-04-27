@@ -22,8 +22,8 @@
 				</div>
 				<div class="column">
 					<iframe
-						class="map"
-						:src="
+						class="lozad map"
+						:data-src="
 							`https://www.google.com/maps/embed/v1/place?q=place_id:ChIJI1lYm8r6KocRi7Y4CVcrcP0&zoom=16&maptype=satellite&key=${NUXT_ENV_GMAPS_API_KEY}`
 						"
 						allowfullscreen
@@ -35,8 +35,8 @@
 			<div class="column">
 				<div class="box">
 					<iframe
-						class="calendar"
-						src="https://calendar.google.com/calendar/embed?src=calendar%40copahams.org&ctz=America/Phoenix"
+						class="lozad calendar"
+						data-src="https://calendar.google.com/calendar/embed?src=calendar%40copahams.org&ctz=America/Phoenix"
 					>
 					</iframe>
 				</div>
@@ -48,6 +48,7 @@
 <script>
 import meetingSettings from "../assets/settings/pages/meetings.json";
 import infoNotification from "../components/info-notification";
+import lozad from "lozad";
 
 export default {
 	name: "activities",
@@ -56,6 +57,9 @@ export default {
 			NUXT_ENV_GMAPS_API_KEY: process.env.NUXT_ENV_GMAPS_API_KEY,
 			settings: meetingSettings
 		};
+	},
+	mounted() {
+		lozad().observe();
 	},
 	components: {
 		infoNotification

@@ -16,7 +16,8 @@
 							<div class="media-left" v-if="officer.image_src">
 								<figure class="image is-128x128">
 									<img
-										:src="officer.image_src"
+                    class="lozad"
+										:data-src="officer.image_src"
 										:alt="'photo of ' + officer.name"
 									/>
 								</figure>
@@ -57,7 +58,8 @@
 									>
 										<figure class="image is-128x128">
 											<img
-												:src="member.image_src"
+                        class="lozad"
+												:data-src="member.image_src"
 												:alt="'photo of ' + member.name"
 											/>
 										</figure>
@@ -95,7 +97,8 @@
 									<div class="media-left" v-if="ve.image_src">
 										<figure class="image is-128x128">
 											<img
-												:src="ve.image_src"
+                        class="lozad"
+												:data-src="ve.image_src"
 												:alt="'photo of ' + ve.name"
 											/>
 										</figure>
@@ -123,6 +126,7 @@
 import aboutSettings from "../assets/settings/pages/about.json";
 import _orderBy from "lodash/orderBy";
 import gravatarUrl from "gravatar-url";
+import lozad from "lozad";
 
 const orderedBoardMembers = _orderBy(aboutSettings.board_members, "name");
 const orderedVeTeam = _orderBy(aboutSettings.ve_team, "name");
@@ -137,6 +141,9 @@ export default {
 				ve_team: orderedVeTeam.map(_addImgSrc)
 			}
 		};
+	},
+	mounted() {
+		lozad().observe();
 	}
 };
 

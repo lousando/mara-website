@@ -7,7 +7,7 @@
 			</nuxt-link>
 			<!-- Burger -->
 			<div
-        role="button"
+				role="button"
 				:class="{
 					'navbar-burger': true,
 					'is-active': this.$store.state.showNavbar
@@ -45,12 +45,17 @@
 						<nuxt-link class="navbar-item" to="/badges">
 							Badges
 						</nuxt-link>
-						<nuxt-link class="navbar-item" to="/constitution_and_by_laws">
+						<hr class="navbar-divider" />
+						<nuxt-link
+							class="navbar-item"
+							to="/constitution_and_by_laws"
+						>
 							Constitution & By-Laws
 						</nuxt-link>
 						<nuxt-link class="navbar-item" to="/arrl_affiliation">
 							ARRL Affiliation
 						</nuxt-link>
+						<hr class="navbar-divider" />
 						<a
 							class="navbar-item"
 							href="https://www.flickr.com/photos/copahams/albums"

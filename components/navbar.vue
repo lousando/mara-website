@@ -45,11 +45,8 @@
 						<nuxt-link class="navbar-item" to="/badges">
 							Badges
 						</nuxt-link>
-						<nuxt-link class="navbar-item" to="/by_laws">
-							By-Laws
-						</nuxt-link>
-						<nuxt-link class="navbar-item" to="/constitution">
-							Constitution
+						<nuxt-link class="navbar-item" to="/constitution_and_by_laws">
+							Constitution & By-Laws
 						</nuxt-link>
 						<nuxt-link class="navbar-item" to="/arrl_affiliation">
 							ARRL Affiliation

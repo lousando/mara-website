@@ -16,6 +16,23 @@ $warning: $az-yellow;
   justify-content: center;
 }
 
+#main-hero {
+  background-image: url("/imgs/antenna.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 53%;
+  background-blend-mode: hard-light;
+  background-color: rgba(25ł, 25, 180, 1);
+  color: white;
+  text-shadow: 2px 2px 2px black;
+  height: 70vh;
+}
+ł
+body, .footer {
+  background-color: black;
+  color: white;
+}
+
 /**
   * custom
  */

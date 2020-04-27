@@ -2,7 +2,7 @@
 	<div>
 		<navbar />
 
-		<div class="hero is-primary is-bold">
+		<div id="main-hero" class="hero">
 			<div class="hero-body" role="banner">
 				<div class="container">
 					<div class="title">
@@ -10,7 +10,7 @@
 							Maricopa Amateur Radio Association
 						</nuxt-link>
 					</div>
-					<div class="subtitle">
+					<div class="subtitle has-text-white">
 						A 501(c)(3) nonprofit corporation
 					</div>
 					<!-- icons -->

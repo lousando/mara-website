@@ -3,6 +3,15 @@
 		<div class="columns">
 			<div class="column">
 				<div class="box">
+					<h1 class="is-size-1">
+						Meetings
+					</h1>
+				</div>
+			</div>
+		</div>
+		<div class="columns">
+			<div class="column">
+				<div class="box">
 					<div class="content">
 						<p>{{ settings.main_text }}</p>
 					</div>

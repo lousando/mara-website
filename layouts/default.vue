@@ -255,10 +255,6 @@ export default {
 }
 
 main {
-  padding-bottom: 1rem;
-}
-
-footer {
-	border-top: 1px solid black;
+	padding-bottom: 1rem;
 }
 </style>

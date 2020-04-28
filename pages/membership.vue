@@ -1,12 +1,14 @@
 <template>
 	<section class="has-text-centered">
-    <div class="columns">
-      <div class="column">
-        <h1 class="is-size-1 has-text-white has-background-black-transparent">
-          Annual Membership
-        </h1>
-      </div>
-    </div>
+		<div class="columns">
+			<div class="column">
+				<h1
+					class="is-size-1 has-text-white has-background-black-transparent"
+				>
+					Annual Membership
+				</h1>
+			</div>
+		</div>
 		<div class="box">
 			<div class="columns">
 				<div class="column">
@@ -39,7 +41,7 @@
 										<option value="Single member">
 											Single member: $25.00 USD/year
 										</option>
-										<option value="Family membership">
+										<option value="Family  membership">
 											Family membership: $30.00 USD/year
 										</option>
 									</select>

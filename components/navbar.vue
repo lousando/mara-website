@@ -26,6 +26,10 @@
 			}"
 		>
 			<div class="navbar-start">
+        <!-- Meetings-->
+        <nuxt-link class="navbar-item" to="/repeaters">
+          Repeaters
+        </nuxt-link>
 				<!-- Meetings-->
 				<nuxt-link class="navbar-item" to="/meetings">
 					Meetings

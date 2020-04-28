@@ -1,40 +1,4 @@
 {
-  "repeaters": [
-    {
-      "is_club_repeater": true,
-      "rx_freq": "145.210",
-      "offset": "-600KHz",
-      "pl_tone": "162.2",
-      "qth": "CAC Maricopa Campus",
-      "net": "Mondays @ 8:00pm MST",
-      "extra_info": "Parrot Feature using DMTF 9999"
-    },
-    {
-      "is_club_repeater": true,
-      "rx_freq": "449.125",
-      "offset": "-5MHz",
-      "pl_tone": "136.5",
-      "qth": "CAC Maricopa Campus",
-      "net": "Mondays @ 8:00pm MST",
-      "extra_info": "Parrot Feature using DMTF 9999"
-    },
-    {
-      "is_club_repeater": true,
-      "rx_freq": "446.300",
-      "offset": "-5MHz",
-      "pl_tone": "100.0",
-      "qth": "Thunderbird Farms"
-    },
-    {
-      "is_club_repeater": false,
-      "rx_freq": "146.780",
-      "offset": "-600KHz",
-      "pl_tone": "100.0",
-      "qth": "CAC Maricopa Campus",
-      "net": "Wednesdays @ 7:00pm MST",
-      "extra_info": "Wires X Node 18445, Room 28445, Auto Mode"
-    }
-  ],
   "amazon_smile_pitch": "Support MARA by starting your shopping at smile.amazon.com. Amazon donates 0.5% of the price of your eligible AmazonSmile purchases to the club. AmazonSmile is the same Amazon you know; same products, same prices, same service. Click the button below to get started.",
   "frys_food_pitch": "By registering your loyalty card at Fry's, your purchases will help support the club. Don't worry; this will not affect your rewards points. Click the button below to get started and then search for MARA using Org Code UA109.",
   "donation_pitch": "Please consider making a tax deductible donation, it'll fund future club activities to keep the hobby of ham radio alive."

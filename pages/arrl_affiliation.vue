@@ -2,7 +2,7 @@
 	<section class="has-text-centered">
 		<div class="columns">
 			<div class="column">
-				<h1 class="is-size-1 has-text-white">ARRL Club Charter</h1>
+				<h1 class="is-size-1 has-text-white has-background-black-transparent">ARRL Club Charter</h1>
 			</div>
 		</div>
 		<div class="box">

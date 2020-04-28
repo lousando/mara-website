@@ -2,7 +2,7 @@
 	<section>
 		<div class="columns">
 			<div class="column has-text-centered">
-				<h1 class="is-size-1 has-text-white">Welcome!</h1>
+				<h1 class="is-size-1 has-text-white has-background-black-transparent">Welcome!</h1>
 			</div>
 		</div>
 		<div class="columns">

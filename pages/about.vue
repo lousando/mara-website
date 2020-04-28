@@ -3,9 +3,16 @@
 		<!-- Officers -->
 		<div class="columns">
 			<div class="column">
-				<h1 id="officers" class="is-size-1 has-text-white has-text-centered">
+				<h1
+					id="officers"
+					class="is-size-1 has-text-white has-text-centered has-background-black-transparent"
+				>
 					Officers
 				</h1>
+			</div>
+		</div>
+		<div class="columns">
+			<div class="column">
 				<div
 					class="card"
 					v-for="officer in settings.officers"
@@ -16,7 +23,7 @@
 							<div class="media-left" v-if="officer.image_src">
 								<figure class="image is-128x128">
 									<img
-                    class="lozad"
+										class="lozad"
 										:data-src="officer.image_src"
 										:alt="'photo of ' + officer.name"
 									/>
@@ -38,12 +45,20 @@
 				</div>
 			</div>
 		</div>
+
 		<!-- Board Members -->
 		<div class="columns">
 			<div class="column">
-				<h1 id="board-members" class="is-size-1 has-text-white has-text-centered">
+				<h1
+					id="board-members"
+					class="is-size-1 has-text-white has-text-centered has-background-black-transparent"
+				>
 					Board Members
 				</h1>
+			</div>
+		</div>
+		<div class="columns">
+			<div class="column">
 				<div class="box">
 					<div class="board-members-container">
 						<div
@@ -58,7 +73,7 @@
 									>
 										<figure class="image is-128x128">
 											<img
-                        class="lozad"
+												class="lozad"
 												:data-src="member.image_src"
 												:alt="'photo of ' + member.name"
 											/>
@@ -83,12 +98,20 @@
 				</div>
 			</div>
 		</div>
+
 		<!-- VE Team -->
 		<div class="columns">
 			<div class="column">
-				<h1 id="ve-team" class="is-size-1 has-text-white has-text-centered">
+				<h1
+					id="ve-team"
+					class="is-size-1 has-text-white has-text-centered has-background-black-transparent"
+				>
 					Volunteer Examiner Team
 				</h1>
+			</div>
+		</div>
+		<div class="columns">
+			<div class="column">
 				<div class="box">
 					<div class="ve-container">
 						<div v-for="ve in settings.ve_team" :key="ve.call_sign">
@@ -97,7 +120,7 @@
 									<div class="media-left" v-if="ve.image_src">
 										<figure class="image is-128x128">
 											<img
-                        class="lozad"
+												class="lozad"
 												:data-src="ve.image_src"
 												:alt="'photo of ' + ve.name"
 											/>

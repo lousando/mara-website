@@ -2,7 +2,7 @@
 	<section>
 		<div class="columns">
 			<div class="column has-text-centered">
-				<h1 class="is-size-1 has-text-white">
+				<h1 class="is-size-1 has-text-white has-background-black-transparent">
 					Contact Us
 				</h1>
 			</div>

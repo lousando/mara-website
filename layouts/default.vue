@@ -252,11 +252,21 @@ export default {
 	text-shadow: 3px 3px 5px black;
 }
 
+@keyframes sunset {
+	from {
+		background: black;
+	}
+	to {
+		background: rgba(25, 25, 180, 1);
+	}
+}
+
 .banner-background-container {
 	background: linear-gradient(to bottom, rgba(25, 25, 180, 1), transparent);
 	position: absolute;
 	transform: translateY(-10%);
 	z-index: -1;
+	animation: 0.5s sunset ease-in; // prevents blue splash in the beginning
 
 	&__image {
 		mix-blend-mode: hard-light;

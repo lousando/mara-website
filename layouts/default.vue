@@ -4,11 +4,15 @@
 
 		<div id="main-hero" class="hero">
 			<div class="banner-background-container">
-				<img
-					class="banner-background-container__image"
-					src="/imgs/antenna.jpg"
-					alt="antenna image"
-				/>
+				<picture aria-hidden="true">
+					<source srcset="/imgs/antenna.webp" type="image/webp" />
+					<source srcset="/imgs/antenna.jpg" type="image/jpeg" />
+					<img
+						class="banner-background-container__image"
+						src="/imgs/antenna.jpg"
+						alt="antenna image"
+					/>
+				</picture>
 			</div>
 			<div class="hero-body" role="banner">
 				<div class="container">

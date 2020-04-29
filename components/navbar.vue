@@ -1,5 +1,5 @@
 <template>
-	<nav class="navbar is-black" role="navigation">
+	<nav class="navbar is-fixed-top is-black" role="navigation">
 		<div class="navbar-brand">
 			<!-- Home -->
 			<nuxt-link class="navbar-item" to="/">
@@ -158,11 +158,6 @@ export default {
 </script>
 
 <style scoped>
-nav {
-	top: 0;
-	position: sticky;
-}
-
 .spacer {
 	width: 0.5rem;
 }

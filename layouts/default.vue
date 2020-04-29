@@ -2,7 +2,7 @@
 	<div>
 		<navbar />
 
-		<div id="main-hero" class="hero">
+		<section id="main-hero" class="hero">
 			<div class="banner-background-container">
 				<picture aria-hidden="true">
 					<source srcset="/imgs/antenna.webp" type="image/webp" />
@@ -16,60 +16,72 @@
 			</div>
 			<div class="hero-body" role="banner">
 				<div class="container">
-					<div class="title">
-						<nuxt-link class="has-text-white" to="/">
-							Maricopa Amateur Radio Association
-						</nuxt-link>
-					</div>
-					<div class="subtitle has-text-white">
-						A 501(c)(3) nonprofit corporation
-					</div>
-					<!-- icons -->
-					<div>
-						<a
-							href="http://facebook.com/copahams"
-							target="_blank"
-							class="social-icon social-icon--facebook"
-							aria-label="MARA Facebook"
-						>
-							<font-awesome-icon :icon="faFacebook" />
-						</a>
-						<a
-							href="https://twitter.com/CopaHams"
-							target="_blank"
-							class="social-icon social-icon--twitter"
-							aria-label="MARA Twitter"
-						>
-							<font-awesome-icon :icon="faTwitter" />
-						</a>
-						<a
-							href="https://www.instagram.com/copahams/"
-							target="_blank"
-							class="social-icon social-icon--instagram"
-							aria-label="MARA Instagram"
-						>
-							<font-awesome-icon :icon="faInstagram" />
-						</a>
-						<a
-							href="https://www.youtube.com/channel/UC1JJQI7fnsLHcuerGbHLJKw"
-							target="_blank"
-							class="social-icon social-icon--youtube"
-							aria-label="MARA Youtube"
-						>
-							<font-awesome-icon :icon="faYoutube" />
-						</a>
-						<a
-							href="https://www.flickr.com/photos/copahams/albums"
-							target="_blank"
-							class="social-icon social-icon--flickr"
-							aria-label="MARA Flickr"
-						>
-							<font-awesome-icon :icon="faFlickr" />
-						</a>
+					<div class="columns is-gapless">
+						<div class="column is-narrow is-hidden-mobile">
+							<img
+								src="/imgs/mara_logo.svg"
+								width="200"
+								height="200"
+								alt="MARA Logo"
+							/>
+						</div>
+						<div class="column">
+							<div class="title">
+								<nuxt-link class="has-text-white" to="/">
+									Maricopa Amateur Radio Association
+								</nuxt-link>
+							</div>
+							<div class="subtitle has-text-white">
+								A 501(c)(3) nonprofit corporation
+							</div>
+							<!-- icons -->
+							<div>
+								<a
+									href="http://facebook.com/copahams"
+									target="_blank"
+									class="social-icon social-icon--facebook"
+									aria-label="MARA Facebook"
+								>
+									<font-awesome-icon :icon="faFacebook" />
+								</a>
+								<a
+									href="https://twitter.com/CopaHams"
+									target="_blank"
+									class="social-icon social-icon--twitter"
+									aria-label="MARA Twitter"
+								>
+									<font-awesome-icon :icon="faTwitter" />
+								</a>
+								<a
+									href="https://www.instagram.com/copahams/"
+									target="_blank"
+									class="social-icon social-icon--instagram"
+									aria-label="MARA Instagram"
+								>
+									<font-awesome-icon :icon="faInstagram" />
+								</a>
+								<a
+									href="https://www.youtube.com/channel/UC1JJQI7fnsLHcuerGbHLJKw"
+									target="_blank"
+									class="social-icon social-icon--youtube"
+									aria-label="MARA Youtube"
+								>
+									<font-awesome-icon :icon="faYoutube" />
+								</a>
+								<a
+									href="https://www.flickr.com/photos/copahams/albums"
+									target="_blank"
+									class="social-icon social-icon--flickr"
+									aria-label="MARA Flickr"
+								>
+									<font-awesome-icon :icon="faFlickr" />
+								</a>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
+		</section>
 
 		<!-- main content -->
 		<main class="container">
@@ -190,23 +202,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.hero-body {
-	background-image: url("/imgs/mara_logo.svg");
-	background-size: 200px 200px;
-	background-repeat: no-repeat;
-	padding-left: 200px;
-
-	@media (max-width: 699px) {
-		& {
-			background-image: none;
-			padding-left: 0;
-		}
-	}
-}
-
 #main-hero {
 	color: white;
 	text-shadow: 3px 3px 5px black;
+  margin-top: 3.25rem;
 }
 
 @keyframes sunset {

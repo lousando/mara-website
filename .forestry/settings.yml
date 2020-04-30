@@ -9,7 +9,6 @@ sections:
 - type: document
   path: assets/settings/pages/repeaters.json
   label: Repeaters
-  match: "**/*"
 - type: heading
   label: Global
 - type: document

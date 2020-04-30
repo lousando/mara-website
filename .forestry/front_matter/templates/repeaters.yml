@@ -1,0 +1,32 @@
+---
+label: Repeaters
+hide_body: true
+fields:
+- type: text
+  name: description
+  label: description
+- type: field_group_list
+  name: repeaters
+  label: repeaters
+  fields:
+  - type: boolean
+    name: is_club_repeater
+    label: is_club_repeater
+  - type: text
+    name: rx_freq
+    label: rx_freq
+  - type: text
+    name: offset
+    label: offset
+  - type: text
+    name: pl_tone
+    label: pl_tone
+  - type: text
+    name: qth
+    label: qth
+  - type: text
+    name: net
+    label: net
+  - type: text
+    name: extra_info
+    label: extra_info

@@ -46,13 +46,24 @@ fields:
     config:
       maxSize: 
     label: Image
+  config:
+    labelField: name
 - type: field_group_list
   name: ve_team
-  label: ve_team
+  label: Club VE Team
   fields:
   - type: text
     name: name
-    label: name
+    label: Name
+    config:
+      required: true
   - type: text
     name: call_sign
-    label: call_sign
+    label: Call Sign
+  - name: image_src
+    type: file
+    config:
+      maxSize: 
+    label: Image
+  config:
+    labelField: name

@@ -9,6 +9,10 @@ sections:
 - type: document
   path: assets/settings/pages/repeaters.json
   label: Repeaters
+- type: document
+  path: assets/settings/pages/meetings.json
+  label: Meetings
+  match: "**/*"
 - type: heading
   label: Global
 - type: document

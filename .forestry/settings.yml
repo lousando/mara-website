@@ -6,6 +6,10 @@ webhook_url:
 sections:
 - type: heading
   label: Pages
+- type: document
+  path: assets/settings/pages/repeaters.json
+  label: Repeaters
+  match: "**/*"
 - type: heading
   label: Global
 - type: document

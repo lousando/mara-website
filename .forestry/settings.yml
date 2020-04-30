@@ -12,7 +12,6 @@ sections:
 - type: document
   path: assets/settings/pages/meetings.json
   label: Meetings
-  match: "**/*"
 - type: heading
   label: Global
 - type: document

@@ -4,29 +4,48 @@ hide_body: true
 fields:
 - type: text
   name: description
-  label: description
+  label: Page Description
+  description: Text that will display above the repeater information
+  config:
+    required: true
 - type: field_group_list
   name: repeaters
-  label: repeaters
+  label: Repeaters
   fields:
   - type: boolean
     name: is_club_repeater
-    label: is_club_repeater
+    label: Is Club Repeater?
+    description: Whether or not this repeater belongs to the club.
   - type: text
     name: rx_freq
-    label: rx_freq
+    label: Receive Frequency
+    description: The output frequency for the repeater.
+    config:
+      required: true
   - type: text
     name: offset
-    label: offset
+    label: Offset
+    description: The frequency shift an operator must apply to the station in order
+      to get the input frequency.
+    config:
+      required: true
   - type: text
     name: pl_tone
-    label: pl_tone
+    label: PL Tone
+    description: Private Line tone that needs to be applied to the input frequency
+      in order to transmit.
+    config:
+      required: true
   - type: text
     name: qth
-    label: qth
+    label: QTH
+    description: The location of the repeater.
   - type: text
     name: net
-    label: net
+    label: Net
+    description: The schedule of the net that happens on this repeater.
   - type: text
     name: extra_info
-    label: extra_info
+    label: Extra Info
+    description: Additional features the repeater might have. Such as a parrot or
+      digital mode.

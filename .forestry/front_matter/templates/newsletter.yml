@@ -1,0 +1,7 @@
+---
+label: Newsletter
+hide_body: true
+fields:
+- type: textarea
+  name: main_text
+  label: main_text

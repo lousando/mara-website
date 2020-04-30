@@ -15,7 +15,6 @@ sections:
 - type: document
   path: assets/settings/pages/newsletter.json
   label: Newsletter
-  match: "**/*"
 - type: heading
   label: Global
 - type: document

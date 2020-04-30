@@ -8,6 +8,9 @@ sections:
   label: Pages
 - type: heading
   label: Global
+- type: document
+  path: assets/settings/global.json
+  label: Settings
 upload_dir: static/uploads
 public_path: "/uploads"
 front_matter_path: ''

@@ -21,7 +21,6 @@ sections:
 - type: document
   path: assets/settings/pages/badges.json
   label: Badges
-  match: "**/*"
 - type: document
   path: assets/settings/pages/about.json
   label: About

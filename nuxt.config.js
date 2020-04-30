@@ -16,7 +16,7 @@ export default {
 			{
 				hid: "description",
 				name: "description",
-				content: process.env.npm_package_description || ""
+				content: "The Maricopa Amateur Radio Association"
 			}
 		],
 		link: [{ rel: "icon", type: "image/x-icon", href: "/imgs/favicon.ico" }]
@@ -24,7 +24,7 @@ export default {
 	/*
 	 ** Customize the progress-bar color
 	 */
-	loading: { color: "#fff" },
+	loading: { color: "#000" },
 	/*
 	 ** Global CSS
 	 */

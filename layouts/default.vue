@@ -107,7 +107,8 @@
 						rel="noreferrer noopener"
 					>
 						<button type="button" class="button is-primary">
-							Register with Amazon Smile
+							Register with Amazon Smile &nbsp;
+							<font-awesome-icon :icon="faAmazon" />
 						</button>
 					</a>
 				</div>
@@ -144,7 +145,8 @@
 						rel="noreferrer noopener"
 					>
 						<button type="button" class="button is-primary">
-							Register with Fry's Food
+							Register with Fry's Food &nbsp;
+							<font-awesome-icon :icon="faUtensils" />
 						</button>
 					</a>
 				</div>
@@ -171,13 +173,15 @@
 <script>
 import defaultLayoutSettings from "../assets/settings/layout/default.json";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import { faUtensils } from "@fortawesome/free-solid-svg-icons";
 import {
 	faGithub,
 	faFacebook,
 	faTwitter,
 	faInstagram,
 	faYoutube,
-	faFlickr
+	faFlickr,
+	faAmazon
 } from "@fortawesome/free-brands-svg-icons";
 import navbar from "../components/navbar";
 
@@ -191,7 +195,9 @@ export default {
 			faTwitter,
 			faInstagram,
 			faYoutube,
-			faFlickr
+			faFlickr,
+			faAmazon,
+			faUtensils
 		};
 	},
 	components: {
@@ -205,7 +211,7 @@ export default {
 #main-hero {
 	color: white;
 	text-shadow: 3px 3px 5px black;
-  margin-top: 3.25rem;
+	margin-top: 3.25rem;
 }
 
 @keyframes sunset {

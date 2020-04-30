@@ -8,6 +8,7 @@
 			<!-- Burger -->
 			<div
 				role="button"
+				aria-label="Navbar Burger"
 				:class="{
 					'navbar-burger': true,
 					'is-active': this.$store.state.showNavbar
@@ -157,25 +158,25 @@
 </template>
 
 <script>
-  import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-  import {
-    faBook,
-    faBoxes,
-    faBroadcastTower,
-    faCalendarAlt,
-    faCertificate,
-    faComments,
-    faExternalLinkAlt,
-    faGavel,
-    faIdBadge,
-    faImages,
-    faMapMarkedAlt,
-    faNewspaper,
-    faRibbon,
-    faUsers
-  } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import {
+	faBook,
+	faBoxes,
+	faBroadcastTower,
+	faCalendarAlt,
+	faCertificate,
+	faComments,
+	faExternalLinkAlt,
+	faGavel,
+	faIdBadge,
+	faImages,
+	faMapMarkedAlt,
+	faNewspaper,
+	faRibbon,
+	faUsers
+} from "@fortawesome/free-solid-svg-icons";
 
-  export default {
+export default {
 	name: "navbar",
 	data() {
 		return {

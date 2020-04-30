@@ -48,6 +48,7 @@ fields:
     label: Image
   config:
     labelField: name
+  description: Order here is not preserved. Members are sorted alphabetically on website.
 - type: field_group_list
   name: ve_team
   label: Club VE Team
@@ -67,3 +68,4 @@ fields:
     label: Image
   config:
     labelField: name
+  description: Order here is not preserved. Members are sorted alphabetically on website.

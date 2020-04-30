@@ -18,6 +18,9 @@ sections:
 - type: document
   path: assets/settings/pages/membership.json
   label: Membership
+- type: document
+  path: assets/settings/pages/about.json
+  label: About
   match: "**/*"
 - type: heading
   label: Global

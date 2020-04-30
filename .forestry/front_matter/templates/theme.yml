@@ -1,0 +1,13 @@
+---
+label: Theme
+hide_body: true
+fields:
+- type: textarea
+  name: amazon_smile_pitch
+  label: amazon_smile_pitch
+- type: textarea
+  name: frys_food_pitch
+  label: frys_food_pitch
+- type: textarea
+  name: donation_pitch
+  label: donation_pitch

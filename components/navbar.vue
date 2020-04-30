@@ -26,38 +26,52 @@
 			}"
 		>
 			<div class="navbar-start">
-        <!-- Meetings-->
-        <nuxt-link class="navbar-item" to="/repeaters">
-          Repeaters
-        </nuxt-link>
+				<!-- Meetings-->
+				<nuxt-link class="navbar-item" to="/repeaters">
+					<font-awesome-icon :icon="faBroadcastTower" class="icon" />
+					&nbsp; Repeaters
+				</nuxt-link>
 				<!-- Meetings-->
 				<nuxt-link class="navbar-item" to="/meetings">
-					Meetings
+					<font-awesome-icon :icon="faUsers" class="icon" />
+					&nbsp; Meetings
 				</nuxt-link>
 				<!-- Club Resources -->
 				<div class="navbar-item has-dropdown is-hoverable">
 					<span class="navbar-link">
-						Club Resources
+						<font-awesome-icon :icon="faBoxes" class="icon" />
+						&nbsp; Club Resources
 					</span>
 					<div class="navbar-dropdown is-boxed">
 						<nuxt-link class="navbar-item" to="/newsletter">
-							Newsletter
+							<font-awesome-icon
+								:icon="faNewspaper"
+								class="icon"
+							/>
+							&nbsp; Newsletter
 						</nuxt-link>
 						<nuxt-link class="navbar-item" to="/membership">
-							Membership
+							<font-awesome-icon :icon="faRibbon" class="icon" />
+							&nbsp; Membership
 						</nuxt-link>
 						<nuxt-link class="navbar-item" to="/badges">
-							Badges
+							<font-awesome-icon :icon="faIdBadge" class="icon" />
+							&nbsp; Badges
 						</nuxt-link>
 						<hr class="navbar-divider" />
 						<nuxt-link
 							class="navbar-item"
 							to="/constitution_and_by_laws"
 						>
-							Constitution & By-Laws
+							<font-awesome-icon :icon="faGavel" class="icon" />
+							&nbsp; Constitution & By-Laws
 						</nuxt-link>
 						<nuxt-link class="navbar-item" to="/arrl_affiliation">
-							ARRL Affiliation
+							<font-awesome-icon
+								:icon="faCertificate"
+								class="icon"
+							/>
+							&nbsp; ARRL Affiliation
 						</nuxt-link>
 						<hr class="navbar-divider" />
 						<a
@@ -66,7 +80,8 @@
 							target="_blank"
 							rel="noopener noreferrer"
 						>
-							Gallery
+							<font-awesome-icon :icon="faImages" class="icon" />
+							&nbsp; Gallery
 							<span class="spacer"></span>
 							<font-awesome-icon
 								:icon="faExternalLinkAlt"
@@ -79,7 +94,11 @@
 							target="_blank"
 							rel="noopener noreferrer"
 						>
-							AZ AREDN Map
+							<font-awesome-icon
+								:icon="faMapMarkedAlt"
+								class="icon"
+							/>
+							&nbsp; AZ AREDN Map
 							<span class="spacer"></span>
 							<font-awesome-icon
 								:icon="faExternalLinkAlt"
@@ -91,7 +110,8 @@
 				<!-- Events-->
 				<div class="navbar-item has-dropdown is-hoverable">
 					<span class="navbar-link">
-						Events
+						<font-awesome-icon :icon="faCalendarAlt" class="icon" />
+						&nbsp; Events
 					</span>
 					<div class="navbar-dropdown is-boxed">
 						<a
@@ -99,7 +119,7 @@
 							href="https://copafest.org"
 							target="_blank"
 						>
-							CopaFest
+							🎉&nbsp; CopaFest
 							<span class="spacer"></span>
 							<font-awesome-icon
 								:icon="faExternalLinkAlt"
@@ -112,7 +132,7 @@
 							target="_blank"
 							rel="noopener noreferrer"
 						>
-							AZ Hamfests
+							🎊&nbsp; AZ Hamfests
 							<span class="spacer"></span>
 							<font-awesome-icon
 								:icon="faExternalLinkAlt"
@@ -123,11 +143,13 @@
 				</div>
 				<!-- Contact Us -->
 				<nuxt-link class="navbar-item" to="/contact">
-					Contact Us
+					<font-awesome-icon :icon="faComments" class="icon" />
+					&nbsp; Contact Us
 				</nuxt-link>
 				<!-- About -->
 				<nuxt-link class="navbar-item" to="/about">
-					About
+					<font-awesome-icon :icon="faBook" class="icon" />
+					&nbsp; About
 				</nuxt-link>
 			</div>
 		</div>
@@ -135,15 +157,43 @@
 </template>
 
 <script>
-import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
+  import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+  import {
+    faBook,
+    faBoxes,
+    faBroadcastTower,
+    faCalendarAlt,
+    faCertificate,
+    faComments,
+    faExternalLinkAlt,
+    faGavel,
+    faIdBadge,
+    faImages,
+    faMapMarkedAlt,
+    faNewspaper,
+    faRibbon,
+    faUsers
+  } from "@fortawesome/free-solid-svg-icons";
 
-export default {
+  export default {
 	name: "navbar",
 	data() {
 		return {
 			showNavbar: false,
-			faExternalLinkAlt
+			faExternalLinkAlt,
+			faBroadcastTower,
+			faUsers,
+			faIdBadge,
+			faNewspaper,
+			faCertificate,
+			faGavel,
+			faRibbon,
+			faComments,
+			faBook,
+			faCalendarAlt,
+			faBoxes,
+			faImages,
+			faMapMarkedAlt
 		};
 	},
 	components: {

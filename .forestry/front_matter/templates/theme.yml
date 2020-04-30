@@ -4,10 +4,10 @@ hide_body: true
 fields:
 - type: textarea
   name: amazon_smile_pitch
-  label: amazon_smile_pitch
+  label: Amazon Smile Pitch
 - type: textarea
   name: frys_food_pitch
-  label: frys_food_pitch
+  label: Fry's Food Pitch
 - type: textarea
   name: donation_pitch
-  label: donation_pitch
+  label: Donation Pitch

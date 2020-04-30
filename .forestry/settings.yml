@@ -15,6 +15,10 @@ sections:
 - type: document
   path: assets/settings/pages/newsletter.json
   label: Newsletter
+- type: document
+  path: assets/settings/pages/membership.json
+  label: Membership
+  match: "**/*"
 - type: heading
   label: Global
 - type: document

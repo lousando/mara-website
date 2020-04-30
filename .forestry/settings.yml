@@ -27,6 +27,10 @@ sections:
 - type: heading
   label: Global
 - type: document
+  path: assets/settings/layout/default.json
+  label: Theme
+  match: "**/*"
+- type: document
   path: assets/settings/global.json
   label: Settings
 upload_dir: static/uploads

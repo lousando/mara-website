@@ -207,6 +207,9 @@
 		"font-awesome-icon": FontAwesomeIcon,
 		navbar
 	},
+	mounted() {
+		_initGoogleAnalytics();
+	},
 	methods: {
 		onLoadBannerImage: () => {
 			document
@@ -215,6 +218,31 @@
 		}
 	}
 };
+
+function _initGoogleAnalytics() {
+	/**
+	 * Most likely using an add blocker.
+	 * Don't slow down the page by making a request
+	 * that'll likely be blocked.
+	 */
+	if (navigator.doNotTrack !== "1") {
+		const gaId = "UA-156478886-2";
+
+		let trackingScript = document.createElement("script");
+		trackingScript.defer = true;
+		trackingScript.src = `https://www.googletagmanager.com/gtag/js?id=${gaId}`;
+		document.head.appendChild(trackingScript);
+
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+
+		gtag("js", new Date());
+		gtag("config", gaId);
+	}
+}
 </script>
 
 <style lang="scss" scoped>

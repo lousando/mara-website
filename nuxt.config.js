@@ -6,6 +6,9 @@ export default {
 	 ** Headers of the page
 	 */
 	head: {
+		htmlAttrs: {
+			lang: "en"
+		},
 		title: "Maricopa ARA",
 		meta: [
 			{ charset: "utf-8" },
@@ -19,7 +22,14 @@ export default {
 				content: "The Maricopa Amateur Radio Association"
 			}
 		],
-		link: [{ rel: "icon", type: "image/x-icon", href: "/imgs/favicon.ico" }]
+		link: [
+			// preloads
+			{ rel: "preload", as: "image", href: "/imgs/favicon.ico" },
+			{ rel: "preload", as: "image", href: "/imgs/antenna.webp" },
+			{ rel: "preload", as: "image", href: "/imgs/mara_logo.svg" },
+			// direct links
+			{ rel: "icon", type: "image/x-icon", href: "/imgs/favicon.ico" }
+		]
 	},
 	/*
 	 ** Customize the progress-bar color

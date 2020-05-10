@@ -303,8 +303,12 @@ function _initGoogleAnalytics() {
 
 .social-icon {
 	font-size: 1.5rem;
-	margin-left: 0.1rem;
-	margin-right: 0.1rem;
+	margin-left: 0.2rem;
+	margin-right: 0.2rem;
+
+	svg {
+		filter: drop-shadow(3px 3px 5px black);
+	}
 
 	&--facebook {
 		@include social-icon-colors(#405d9a);

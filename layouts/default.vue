@@ -45,7 +45,10 @@
 									class="social-icon social-icon--facebook"
 									aria-label="MARA Facebook"
 								>
-									<font-awesome-icon :icon="faFacebook" />
+									<font-awesome-icon
+										class="icon"
+										:icon="faFacebook"
+									/>
 								</a>
 								<a
 									href="https://twitter.com/CopaHams"
@@ -53,7 +56,10 @@
 									class="social-icon social-icon--twitter"
 									aria-label="MARA Twitter"
 								>
-									<font-awesome-icon :icon="faTwitter" />
+									<font-awesome-icon
+										class="icon"
+										:icon="faTwitter"
+									/>
 								</a>
 								<a
 									href="https://www.instagram.com/copahams/"
@@ -61,7 +67,10 @@
 									class="social-icon social-icon--instagram"
 									aria-label="MARA Instagram"
 								>
-									<font-awesome-icon :icon="faInstagram" />
+									<font-awesome-icon
+										class="icon"
+										:icon="faInstagram"
+									/>
 								</a>
 								<a
 									href="https://www.youtube.com/channel/UC1JJQI7fnsLHcuerGbHLJKw"
@@ -69,7 +78,10 @@
 									class="social-icon social-icon--youtube"
 									aria-label="MARA Youtube"
 								>
-									<font-awesome-icon :icon="faYoutube" />
+									<font-awesome-icon
+										class="icon"
+										:icon="faYoutube"
+									/>
 								</a>
 								<a
 									href="https://www.flickr.com/photos/copahams/albums"
@@ -77,7 +89,10 @@
 									class="social-icon social-icon--flickr"
 									aria-label="MARA Flickr"
 								>
-									<font-awesome-icon :icon="faFlickr" />
+									<font-awesome-icon
+										class="icon"
+										:icon="faFlickr"
+									/>
 								</a>
 							</div>
 						</div>
@@ -174,21 +189,21 @@
 </template>
 
 <script>
-  import defaultLayoutSettings from "../assets/settings/layout/default.json";
-  import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-  import { faUtensils } from "@fortawesome/free-solid-svg-icons";
-  import {
-    faAmazon,
-    faFacebook,
-    faFlickr,
-    faGithub,
-    faInstagram,
-    faTwitter,
-    faYoutube
-  } from "@fortawesome/free-brands-svg-icons";
-  import navbar from "../components/navbar";
+import defaultLayoutSettings from "../assets/settings/layout/default.json";
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import { faUtensils } from "@fortawesome/free-solid-svg-icons";
+import {
+	faAmazon,
+	faFacebook,
+	faFlickr,
+	faGithub,
+	faInstagram,
+	faTwitter,
+	faYoutube
+} from "@fortawesome/free-brands-svg-icons";
+import navbar from "../components/navbar";
 
-  export default {
+export default {
 	name: "mara-footer",
 	data() {
 		return {

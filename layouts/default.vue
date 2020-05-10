@@ -3,11 +3,14 @@
 		<navbar />
 
 		<section id="main-hero" class="hero">
-			<div class="banner-background-container">
+			<div
+				class="banner-background-container banner-background-container--loading"
+			>
 				<picture aria-hidden="true">
 					<source srcset="/imgs/antenna.webp" type="image/webp" />
 					<source srcset="/imgs/antenna.jpg" type="image/jpeg" />
 					<img
+						@load="onLoadBannerImage"
 						class="banner-background-container__image"
 						src="/imgs/antenna.jpg"
 						alt="antenna image"
@@ -171,21 +174,21 @@
 </template>
 
 <script>
-import defaultLayoutSettings from "../assets/settings/layout/default.json";
-import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-import { faUtensils } from "@fortawesome/free-solid-svg-icons";
-import {
-	faGithub,
-	faFacebook,
-	faTwitter,
-	faInstagram,
-	faYoutube,
-	faFlickr,
-	faAmazon
-} from "@fortawesome/free-brands-svg-icons";
-import navbar from "../components/navbar";
+  import defaultLayoutSettings from "../assets/settings/layout/default.json";
+  import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+  import { faUtensils } from "@fortawesome/free-solid-svg-icons";
+  import {
+    faAmazon,
+    faFacebook,
+    faFlickr,
+    faGithub,
+    faInstagram,
+    faTwitter,
+    faYoutube
+  } from "@fortawesome/free-brands-svg-icons";
+  import navbar from "../components/navbar";
 
-export default {
+  export default {
 	name: "mara-footer",
 	data() {
 		return {
@@ -203,6 +206,13 @@ export default {
 	components: {
 		"font-awesome-icon": FontAwesomeIcon,
 		navbar
+	},
+	methods: {
+		onLoadBannerImage: () => {
+			document
+				.querySelector(".banner-background-container--loading")
+				.classList.remove("banner-background-container--loading");
+		}
 	}
 };
 </script>
@@ -214,21 +224,15 @@ export default {
 	margin-top: 3.25rem;
 }
 
-@keyframes sunset {
-	from {
-		background: black;
-	}
-	to {
-		background: rgba(25, 25, 180, 1);
-	}
-}
-
 .banner-background-container {
 	background: linear-gradient(to bottom, rgba(25, 25, 180, 1), transparent);
 	position: absolute;
 	transform: translateY(-10%);
 	z-index: -1;
-	animation: 0.5s sunset ease-in; // prevents blue splash in the beginning
+
+	&--loading {
+		background: black;
+	}
 
 	&__image {
 		mix-blend-mode: hard-light;

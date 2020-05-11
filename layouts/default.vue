@@ -7,13 +7,32 @@
 				class="banner-background-container banner-background-container--loading"
 			>
 				<picture aria-hidden="true">
-					<source srcset="/imgs/antenna.webp" type="image/webp" />
-					<source srcset="/imgs/antenna.jpg" type="image/jpeg" />
+					<!-- webp -->
+					<source
+						srcset="
+							/imgs/antenna_640w.webp   640w,
+							/imgs/antenna_1280w.webp 1280w,
+							/imgs/antenna_1920w.webp 1920w,
+							/imgs/antenna_6020w.webp 6020w
+						"
+						type="image/webp"
+					/>
+					<!-- jpeg -->
+					<source
+						srcset="
+							/imgs/antenna_640w.jpg   640w,
+							/imgs/antenna_1280w.jpg 1280w,
+							/imgs/antenna_1920w.jpg 1920w,
+							/imgs/antenna_6020w.jpg 6020w
+						"
+						type="image/jpeg"
+					/>
+					<!-- fallback -->
 					<img
 						@load="onLoadBannerImage"
 						class="banner-background-container__image"
-						src="/imgs/antenna.jpg"
-						alt="antenna image"
+						src="/imgs/antenna_6020w.jpg"
+						alt="antenna on a mountain in Phoenix, Arizona"
 					/>
 				</picture>
 			</div>
@@ -227,9 +246,15 @@ export default {
 	},
 	methods: {
 		onLoadBannerImage: () => {
-			document
-				.querySelector(".banner-background-container--loading")
-				.classList.remove("banner-background-container--loading");
+			const loadingBanner = document.querySelector(
+				".banner-background-container--loading"
+			);
+
+			if (loadingBanner) {
+				loadingBanner.classList.remove(
+					"banner-background-container--loading"
+				);
+			}
 		}
 	}
 };

@@ -24,9 +24,15 @@ export default {
 		],
 		link: [
 			// preloads
-			{ rel: "preload", as: "image", href: "/imgs/favicon.ico" },
-			{ rel: "preload", as: "image", href: "/imgs/antenna.webp" },
 			{ rel: "preload", as: "image", href: "/imgs/mara_logo.svg" },
+			// banner
+			{
+				rel: "preload",
+				as: "image",
+				href: "/imgs/antenna_6020w.jpg",
+				imagesrcset:
+					"/imgs/antenna_640w.webp 640w, /imgs/antenna_1280w.webp 1280w, /imgs/antenna_1920w.webp 1920w, /imgs/antenna_6020w.webp 6020w"
+			},
 			// direct links
 			{ rel: "icon", type: "image/x-icon", href: "/imgs/favicon.ico" }
 		]

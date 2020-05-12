@@ -4,6 +4,7 @@
 			<div class="column">
 				<h1
 					class="is-size-1 has-text-white has-background-black-transparent"
+					v-if="error.statusCode === 404"
 				>
 					Page Not Found!
 				</h1>
@@ -13,8 +14,11 @@
 			<div class="column">
 				<div class="box">
 					<div class="content">
-						<p>
-							​{{ this.$store.state.globalSettings.error_404_message }}
+						<p v-if="error.statusCode === 404">
+							​{{
+								this.$store.state.globalSettings
+									.error_404_message
+							}}
 						</p>
 					</div>
 				</div>
@@ -25,7 +29,8 @@
 
 <script>
 export default {
-	name: "error_404"
+	props: ["error"],
+	layout: "default"
 };
 </script>
 

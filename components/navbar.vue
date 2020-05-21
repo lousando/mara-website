@@ -11,7 +11,7 @@
 				aria-label="Navbar Burger"
 				:class="{
 					'navbar-burger': true,
-					'is-active': this.$store.state.showNavbar
+					'is-active': this.$store.state.showNavbar,
 				}"
 				@click="onClickHamburgerMenu"
 			>
@@ -23,7 +23,7 @@
 		<div
 			:class="{
 				'navbar-menu': true,
-				'is-active': this.$store.state.showNavbar
+				'is-active': this.$store.state.showNavbar,
 			}"
 		>
 			<div class="navbar-start">
@@ -106,6 +106,20 @@
 								class="icon"
 							/>
 						</a>
+						<a
+							class="navbar-item"
+							href="https://discord.gg/Gq98SwK"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<font-awesome-icon :icon="faDiscord" class="icon" />
+							&nbsp; MARA Discord Server
+							<span class="spacer"></span>
+							<font-awesome-icon
+								:icon="faExternalLinkAlt"
+								class="icon"
+							/>
+						</a>
 					</div>
 				</div>
 				<!-- Events-->
@@ -173,8 +187,9 @@ import {
 	faMapMarkedAlt,
 	faNewspaper,
 	faRibbon,
-	faUsers
+	faUsers,
 } from "@fortawesome/free-solid-svg-icons";
+import { faDiscord } from "@fortawesome/free-brands-svg-icons";
 
 export default {
 	name: "navbar",
@@ -194,17 +209,18 @@ export default {
 			faCalendarAlt,
 			faBoxes,
 			faImages,
-			faMapMarkedAlt
+			faMapMarkedAlt,
+			faDiscord,
 		};
 	},
 	components: {
-		"font-awesome-icon": FontAwesomeIcon
+		"font-awesome-icon": FontAwesomeIcon,
 	},
 	methods: {
-		onClickHamburgerMenu: function() {
+		onClickHamburgerMenu: function () {
 			this.$store.commit("toggleNavbar");
-		}
-	}
+		},
+	},
 };
 </script>
 

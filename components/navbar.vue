@@ -120,6 +120,23 @@
 								class="icon"
 							/>
 						</a>
+						<a
+							class="navbar-item"
+							href="https://www.arnewsline.org/"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<font-awesome-icon
+								:icon="faNewspaper"
+								class="icon"
+							/>
+							&nbsp; Amateur Radio Newsline
+							<span class="spacer"></span>
+							<font-awesome-icon
+								:icon="faExternalLinkAlt"
+								class="icon"
+							/>
+						</a>
 					</div>
 				</div>
 				<!-- Events-->

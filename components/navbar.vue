@@ -51,6 +51,13 @@
 							/>
 							&nbsp; Newsletter
 						</nuxt-link>
+            <nuxt-link class="navbar-item" to="/past_meeting_agendas">
+              <font-awesome-icon
+                :icon="faCalendarDay"
+                class="icon"
+              />
+              &nbsp; Past Meeting Agendas
+            </nuxt-link>
 						<nuxt-link class="navbar-item" to="/membership">
 							<font-awesome-icon :icon="faRibbon" class="icon" />
 							&nbsp; Membership
@@ -205,6 +212,7 @@ import {
 	faNewspaper,
 	faRibbon,
 	faUsers,
+  faCalendarDay
 } from "@fortawesome/free-solid-svg-icons";
 import { faDiscord } from "@fortawesome/free-brands-svg-icons";
 
@@ -228,6 +236,7 @@ export default {
 			faImages,
 			faMapMarkedAlt,
 			faDiscord,
+      faCalendarDay
 		};
 	},
 	components: {

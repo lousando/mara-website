@@ -9,18 +9,18 @@ export default {
 		htmlAttrs: {
 			lang: "en"
 		},
-		title: "Maricopa ARA",
+		titleTemplate: "Maricopa ARA - %s",
 		meta: [
 			{ charset: "utf-8" },
 			{
 				name: "viewport",
-				content: "width=device-width, initial-scale=1"
+				content: "width=device-width, initial-scale=1",
 			},
 			{
 				hid: "description",
 				name: "description",
-				content: "The Maricopa Amateur Radio Association"
-			}
+				content: "The Maricopa Amateur Radio Association",
+			},
 		],
 		link: [
 			// preloads
@@ -35,7 +35,8 @@ export default {
 			},
 			// direct links
 			{ rel: "icon", type: "image/x-icon", href: "/imgs/favicon.ico" }
-		]
+		,
+		],
 	},
 	/*
 	 ** Customize the progress-bar color
@@ -52,7 +53,7 @@ export default {
 
 	// router settings
 	router: {
-		middleware: "navbarHide"
+		middleware: "navbarHide",
 	},
 
 	/*
@@ -63,5 +64,5 @@ export default {
 	/*
 	 ** Build configuration
 	 */
-	build: {}
+	build: {},
 };

@@ -2,7 +2,11 @@
 	<section class="has-text-centered">
 		<div class="columns">
 			<div class="column">
-				<h1 class="is-size-1 has-text-white has-background-black-transparent">Repeaters</h1>
+				<h1
+					class="is-size-1 has-text-white has-background-black-transparent"
+				>
+					Repeaters
+				</h1>
 			</div>
 		</div>
 		<div class="box">
@@ -50,12 +54,14 @@
 import repeatersSettings from "../assets/settings/pages/repeaters.json";
 
 export default {
-	name: "repeaters",
+	head: {
+		title: "Repeaters",
+	},
 	data() {
 		return {
-			settings: repeatersSettings
+			settings: repeatersSettings,
 		};
-	}
+	},
 };
 </script>
 

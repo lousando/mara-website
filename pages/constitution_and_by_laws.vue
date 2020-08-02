@@ -45,7 +45,9 @@
 
 <script>
 export default {
-	name: "constitution"
+	head: {
+		title: "Constitution & By-Laws",
+	},
 };
 </script>
 

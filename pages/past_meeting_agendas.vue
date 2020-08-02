@@ -38,7 +38,9 @@
 
 <script>
 export default {
-	name: "Past Meeting Agendas",
+	head: {
+		title: "Past Meeting Agendas",
+	},
 };
 </script>
 

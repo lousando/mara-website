@@ -155,19 +155,21 @@ const orderedBoardMembers = _orderBy(aboutSettings.board_members, "name");
 const orderedVeTeam = _orderBy(aboutSettings.ve_team, "name");
 
 export default {
-	name: "about",
+	head: {
+		title: "About",
+	},
 	data() {
 		return {
 			settings: {
 				officers: aboutSettings.officers.map(_addImgSrc),
 				board_members: orderedBoardMembers.map(_addImgSrc),
-				ve_team: orderedVeTeam.map(_addImgSrc)
-			}
+				ve_team: orderedVeTeam.map(_addImgSrc),
+			},
 		};
 	},
 	mounted() {
 		lozad().observe();
-	}
+	},
 };
 
 function _addImgSrc(member) {
@@ -179,8 +181,8 @@ function _addImgSrc(member) {
 		...member,
 		image_src: gravatarUrl(member.call_sign, {
 			default: "identicon",
-			size: "256"
-		})
+			size: "256",
+		}),
 	};
 }
 </script>

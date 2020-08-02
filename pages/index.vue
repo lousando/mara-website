@@ -57,6 +57,9 @@
 import infoNotification from "../components/info-notification";
 
 export default {
+  head: {
+    title: "Home"
+  },
 	components: {
 		infoNotification
 	}

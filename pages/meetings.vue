@@ -2,7 +2,9 @@
 	<section class="has-text-centered">
 		<div class="columns">
 			<div class="column">
-				<h1 class="is-size-1 has-text-white has-background-black-transparent">
+				<h1
+					class="is-size-1 has-text-white has-background-black-transparent"
+				>
 					Meetings
 				</h1>
 			</div>
@@ -23,9 +25,7 @@
 				<div class="column">
 					<iframe
 						class="lozad map"
-						:data-src="
-							`https://www.google.com/maps/embed/v1/place?q=place_id:ChIJI1lYm8r6KocRi7Y4CVcrcP0&zoom=16&maptype=satellite&key=${NUXT_ENV_GMAPS_API_KEY}`
-						"
+						:data-src="`https://www.google.com/maps/embed/v1/place?q=place_id:ChIJI1lYm8r6KocRi7Y4CVcrcP0&zoom=16&maptype=satellite&key=${NUXT_ENV_GMAPS_API_KEY}`"
 						allowfullscreen
 					></iframe>
 				</div>
@@ -51,19 +51,21 @@ import infoNotification from "../components/info-notification";
 import lozad from "lozad";
 
 export default {
-	name: "activities",
+	head: {
+		title: "Meetings",
+	},
 	data() {
 		return {
 			NUXT_ENV_GMAPS_API_KEY: process.env.NUXT_ENV_GMAPS_API_KEY,
-			settings: meetingSettings
+			settings: meetingSettings,
 		};
 	},
 	mounted() {
 		lozad().observe();
 	},
 	components: {
-		infoNotification
-	}
+		infoNotification,
+	},
 };
 </script>
 

@@ -69,12 +69,14 @@
 import membershipSettings from "../assets/settings/pages/membership.json";
 
 export default {
-	name: "membership",
+	head: {
+		title: "Membership",
+	},
 	data() {
 		return {
-			settings: membershipSettings
+			settings: membershipSettings,
 		};
-	}
+	},
 };
 </script>
 

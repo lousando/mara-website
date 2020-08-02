@@ -1,12 +1,14 @@
 <template>
 	<section class="has-text-centered">
-    <div class="columns">
-      <div class="column">
-        <h1 class="is-size-1 has-text-white has-background-black-transparent">
-          Badge Ordering
-        </h1>
-      </div>
-    </div>
+		<div class="columns">
+			<div class="column">
+				<h1
+					class="is-size-1 has-text-white has-background-black-transparent"
+				>
+					Badge Ordering
+				</h1>
+			</div>
+		</div>
 		<div class="box">
 			<div class="columns">
 				<div class="column">
@@ -63,12 +65,14 @@
 import badgesSettings from "../assets/settings/pages/badges.json";
 
 export default {
-	name: "badges",
+	head: {
+		title: "Badges",
+	},
 	data() {
 		return {
-			settings: badgesSettings
+			settings: badgesSettings,
 		};
-	}
+	},
 };
 </script>
 

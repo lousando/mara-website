@@ -2,7 +2,9 @@
 	<section class="has-text-centered">
 		<div class="columns">
 			<div class="column">
-				<h1 class="is-size-1 has-text-white has-background-black-transparent">
+				<h1
+					class="is-size-1 has-text-white has-background-black-transparent"
+				>
 					Join our mailing list!
 				</h1>
 			</div>
@@ -36,12 +38,14 @@
 import newsletterSettings from "../assets/settings/pages/newsletter.json";
 
 export default {
-	name: "newsletter",
+	head: {
+		title: "Newsletter",
+	},
 	data() {
 		return {
-			settings: newsletterSettings
+			settings: newsletterSettings,
 		};
-	}
+	},
 };
 </script>
 

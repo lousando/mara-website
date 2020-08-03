@@ -7,7 +7,7 @@ export default {
 	 */
 	head: {
 		htmlAttrs: {
-			lang: "en"
+			lang: "en",
 		},
 		titleTemplate: "Maricopa ARA - %s",
 		meta: [
@@ -21,6 +21,10 @@ export default {
 				name: "description",
 				content: "The Maricopa Amateur Radio Association",
 			},
+			{
+				name: "google-site-verification",
+				content: "YgXjJ4qyDlPI1Wym0ui9w9vMhvp-7XXWnZMWcV6C7vQ",
+			},
 		],
 		link: [
 			// preloads
@@ -31,11 +35,10 @@ export default {
 				as: "image",
 				href: "/imgs/antenna_6020w.jpg",
 				imagesrcset:
-					"/imgs/antenna_640w.webp 640w, /imgs/antenna_1280w.webp 1280w, /imgs/antenna_1920w.webp 1920w, /imgs/antenna_6020w.webp 6020w"
+					"/imgs/antenna_640w.webp 640w, /imgs/antenna_1280w.webp 1280w, /imgs/antenna_1920w.webp 1920w, /imgs/antenna_6020w.webp 6020w",
 			},
 			// direct links
-			{ rel: "icon", type: "image/x-icon", href: "/imgs/favicon.ico" }
-		,
+			{ rel: "icon", type: "image/x-icon", href: "/imgs/favicon.ico" },
 		],
 	},
 	/*

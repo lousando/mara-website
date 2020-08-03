@@ -7,7 +7,7 @@ export default {
 	 */
 	head: {
 		htmlAttrs: {
-			lang: "en",
+			lang: "en-us",
 		},
 		titleTemplate: "Maricopa ARA - %s",
 		meta: [

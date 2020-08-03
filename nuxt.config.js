@@ -62,7 +62,11 @@ export default {
 	/*
 	 ** Nuxt.js modules
 	 */
-	modules: [],
+	modules: ["@nuxtjs/sitemap"],
+
+  sitemap: {
+	    hostname: "https://www.copahams.org"
+  },
 
 	/*
 	 ** Build configuration

@@ -1,0 +1,30 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Maricopa ARA",
+  "legalName" : "Maricopa Amateur Radio Association",
+  "description": "The Maricopa Amateur Radio Association",
+  "url": "https://www.copahams.org",
+  "logo": "https://www.copahams.org/imgs/mara_logo.svg",
+  "address": {
+    "@type": "PostalAddress",
+    "postOfficeBoxNumber": "951",
+    "addressLocality": "Maricopa",
+    "addressRegion": "AZ",
+    "postalCode": "85139",
+    "addressCountry": "USA"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "Inquiries",
+    "telephone": "+1-520-222-7646",
+    "areaServed" : "US"
+  },
+  "sameAs": [
+    "http://facebook.com/copahams",
+    "https://twitter.com/CopaHams",
+    "https://www.instagram.com/copahams/",
+    "https://www.youtube.com/channel/UC1JJQI7fnsLHcuerGbHLJKw",
+    "https://www.flickr.com/photos/copahams/albums"
+  ]
+}

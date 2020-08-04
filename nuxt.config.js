@@ -1,4 +1,5 @@
 require("dotenv").config();
+const metadata = require("./assets/metadata.json");
 
 export default {
 	mode: "universal",
@@ -26,6 +27,12 @@ export default {
 				content: "YgXjJ4qyDlPI1Wym0ui9w9vMhvp-7XXWnZMWcV6C7vQ",
 			},
 		],
+    script: [
+      {
+        type: "application/ld+json",
+        json: metadata
+      }
+    ],
 		link: [
 			// preloads
 			{ rel: "preload", as: "image", href: "/imgs/mara_logo.svg" },

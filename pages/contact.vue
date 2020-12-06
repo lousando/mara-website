@@ -118,6 +118,22 @@
 								This field is required
 							</div>
 						</div>
+						<div class="field">
+							<label class="label" v-once>{{
+								this.challengeQuestion
+							}}</label>
+							<div class="control">
+								<input
+									class="input"
+									type="text"
+									required="required"
+									v-model.trim="challengeAnswer"
+								/>
+							</div>
+							<div class="help is-danger">
+								This field is required
+							</div>
+						</div>
 						<div class="has-text-centered">
 							<button
 								:class="{
@@ -181,6 +197,9 @@ export default {
 			// email status
 			emailIsSending: false,
 			emailSent: false,
+			// security
+			challengeQuestion: process.env.NUXT_ENV_CHALLENGE_QUESTION,
+			challengeAnswer: "",
 		};
 	},
 	components: {
@@ -188,6 +207,16 @@ export default {
 	},
 	methods: {
 		onClickSubmit: function () {
+			if (
+				this.challengeAnswer.toLocaleUpperCase() !==
+				process.env.NUXT_ENV_CORRECT_CHALLENGE_ANSWER
+			) {
+				this.challengeAnswer = ""; // clear the wrong answer
+				// tell them the answer is wrong
+				alert("Sorry, wrong answer to the security challenge.");
+				return;
+			}
+
 			this.emailIsSending = true;
 
 			emailjs

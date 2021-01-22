@@ -1,6 +1,12 @@
 <template>
 	<div>
 		<navbar />
+    <div
+      v-for="notification in this.$store.state.globalSettings.notifications"
+      :key="notification"
+      class="notification is-danger is-light has-text-centered"
+      v-html="notification"
+    />
 
 		<section id="main-hero" class="hero">
 			<div
@@ -286,6 +292,11 @@ function _initGoogleAnalytics() {
 </script>
 
 <style lang="scss" scoped>
+
+.notification {
+  margin-top: 5rem;
+}
+
 #main-hero {
 	color: white;
 	text-shadow: 3px 3px 5px black;

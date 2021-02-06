@@ -1,10 +1,10 @@
 {
   "officers": [
     {
-      "name": " ",
-      "call_sign": " ",
+      "name": "Bob Howard",
+      "call_sign": "W8RH",
       "role": "President",
-      "bio": ""
+      "bio": "I got into Amateur Radio in 2009. My old call sign, K9ZHJ, once belonged to my uncle, Tom Hanrahan.After passing my Technician exam in September of 2009, I was able to get his call back. With the assistance of my elmer, N5FW, I am really enjoying this hobby. Passed my General exam in February of 2010 and the Extra in December of 2010. My rig is a stock Icom IC 7610 with a AL-800H amp. The primary antenna is a A-4 older non \"S\" model on a WT51 tower. The wire antenna is an Icom AH-710 set up as an inverted V.  Mobile rig is FTM 400 and FT 70.   Also I am VE Team Liaison and past  President of the Maricopa Amateur Radio Association and now currently a board member www.copahams.org. and board member of Amateur Radio Coundil of Arizona www.arca-az.org   I now have W8RH. Recently got interested in Wires X, and now run a digital net every Wednesday evening at 7:00 PM MST on the DIGITAL DESERT room 28445. Looking forward to hearing from you."
     },
     {
       "name": "Scott Bushman",
@@ -40,6 +40,10 @@
     {
       "name": "Glenn Cline",
       "call_sign": "KG2LF"
+    },
+    {
+      "name": "Mario Barriere",
+      "call_sign": "KJ7NQH"
     }
   ],
   "ve_team": [

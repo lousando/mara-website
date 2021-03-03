@@ -12,53 +12,23 @@
 		<div class="box">
 			<div class="columns">
 				<div class="column">
-					<p>
+					<h5 class="is-size-5">
 						{{ settings.main_text }}
-					</p>
+					</h5>
 				</div>
 			</div>
 			<div class="columns">
 				<div class="column">
-					<form
-						action="https://www.paypal.com/cgi-bin/webscr"
-						method="post"
-						target="_blank"
-					>
-						<!-- hidden fields -->
-						<input type="hidden" name="cmd" value="_s-xclick" />
-						<input
-							type="hidden"
-							name="hosted_button_id"
-							value="SWJ6RDWGJY7X6"
+					<p>
+						{{ settings.sub_text }}
+					</p>
+					<a href="https://secure.hamclubonline.com/" target="_blank">
+						Ham Club Online
+						<font-awesome-icon
+							:icon="faExternalLinkAlt"
+							class="icon"
 						/>
-						<input type="hidden" name="on0" value="ANNUAL dues" />
-						<input type="hidden" name="currency_code" value="USD" />
-
-						<div class="columns">
-							<div class="column">
-								<div class="select">
-									<select name="os0">
-										<option value="Single member">
-											Single member: $25.00 USD/year
-										</option>
-										<option value="Family  membership">
-											Family membership: $30.00 USD/year
-										</option>
-									</select>
-								</div>
-							</div>
-						</div>
-						<div class="columns">
-							<div class="column">
-								<button
-									type="submit"
-									class="square-button square-button--yellow"
-								>
-									Join
-								</button>
-							</div>
-						</div>
-					</form>
+					</a>
 				</div>
 			</div>
 		</div>
@@ -67,6 +37,8 @@
 
 <script>
 import membershipSettings from "../assets/settings/pages/membership.json";
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
 
 export default {
 	head: {
@@ -75,7 +47,11 @@ export default {
 	data() {
 		return {
 			settings: membershipSettings,
+			faExternalLinkAlt,
 		};
+	},
+	components: {
+		"font-awesome-icon": FontAwesomeIcon,
 	},
 };
 </script>

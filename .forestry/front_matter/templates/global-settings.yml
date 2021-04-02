@@ -45,3 +45,5 @@ fields:
   description: Text that's shown whenever a page is not found.
   config:
     required: true
+pages:
+- assets/settings/global.json

@@ -13,6 +13,27 @@
 			<div class="columns">
 				<div class="column">
 					<div class="content">
+						<h3>Where:</h3>
+						<p>
+							{{
+								this.$store.state.globalSettings
+									.meeting_location_name
+							}}
+						</p>
+						<p>
+							{{
+								this.$store.state.globalSettings.meeting_address
+							}}
+						</p>
+						<h3>When:</h3>
+						<p>
+							{{
+								this.$store.state.globalSettings
+									.meeting_frequency
+							}}
+						</p>
+					</div>
+					<div class="content">
 						<p>{{ settings.main_text }}</p>
 					</div>
 					<info-notification>
@@ -25,7 +46,7 @@
 				<div class="column">
 					<iframe
 						class="lozad map"
-						:data-src="`https://www.google.com/maps/embed/v1/place?q=place_id:ChIJI1lYm8r6KocRi7Y4CVcrcP0&zoom=16&maptype=satellite&key=${NUXT_ENV_GMAPS_API_KEY}`"
+						:data-src="`https://www.google.com/maps/embed/v1/place?key=${NUXT_ENV_GMAPS_API_KEY}&q=${this.$store.state.globalSettings.meeting_address}&zoom=16&maptype=satellite`"
 						allowfullscreen
 					></iframe>
 				</div>

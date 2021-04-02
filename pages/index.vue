@@ -2,7 +2,11 @@
 	<section>
 		<div class="columns">
 			<div class="column has-text-centered">
-				<h1 class="is-size-1 has-text-white has-background-black-transparent">Welcome!</h1>
+				<h1
+					class="is-size-1 has-text-white has-background-black-transparent"
+				>
+					Welcome!
+				</h1>
 			</div>
 		</div>
 		<div class="columns">
@@ -30,15 +34,12 @@
 					</h2>
 					<div class="content">
 						<p>
-							Our monthly Business/Club meeting is held on the
-							first Saturday of the month, at 9:00 AM! Our meeting
-							location is the Maricopa PD's Copper Sky Substation,
-							located at 17985 N Greythorn Dr, Maricopa, AZ 85138.
-							Coffee & Doughnuts will be available.
-							<a
-								href="https://calendar.google.com/calendar/embed?src=calendar%40copahams.org&ctz=America/Phoenix"
-								>Click here to check the calendar.</a
-							>
+							We hold a monthly meeting to conduct club activities
+							and go over club business. For more information,
+							please visit
+							<nuxt-link to="/meetings">
+								our meetings page
+							</nuxt-link>
 						</p>
 					</div>
 					<info-notification>
@@ -57,12 +58,12 @@
 import infoNotification from "../components/info-notification";
 
 export default {
-  head: {
-    title: "Home"
-  },
+	head: {
+		title: "Home",
+	},
 	components: {
-		infoNotification
-	}
+		infoNotification,
+	},
 };
 </script>
 

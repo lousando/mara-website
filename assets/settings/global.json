@@ -1,6 +1,9 @@
 {
   "ve_testing_notification_text": "VE Testing is available at all MARA Meetings. Just contact us in advance so we can bring the materials.",
   "error_404_message": "Calling CQ won't help in this instance. Perhaps try another frequency?",
+  "meeting_location_name": "The New Maricopa Public Library",
+  "meeting_address": "18160 N Maya Angelou Dr, Maricopa, AZ 85138",
+  "meeting_frequency": "Every first Saturday of the month @ 9:00 AM",
   "notifications": [
     "<b>*********IN PERSON CLUB MEETINGS ARE BACK! **********</b><br/>Meetings will be held at the new Maricopa Library<br/>"
   ]

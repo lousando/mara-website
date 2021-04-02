@@ -2,21 +2,46 @@
 label: Global Settings
 hide_body: true
 fields:
-- type: textarea
-  name: ve_testing_notification_text
-  label: ve_testing_notification_text
-- type: text
-  name: error_404_message
-  label: error_404_message
-- type: text
-  name: meeting_location_name
-  label: meeting_location_name
-- type: text
-  name: meeting_address
-  label: meeting_address
-- type: text
-  name: meeting_frequency
-  label: meeting_frequency
 - type: list
   name: notifications
-  label: notifications
+  label: Notifications
+  description: Eye-catching banners that will display on top of the site and on every
+    page. Use to display important information.
+  config:
+    use_select: false
+- type: text
+  name: meeting_location_name
+  label: Meeting Location Name
+  description: The name of the place where club meeting takes place.
+  config:
+    required: true
+- type: text
+  name: meeting_address
+  label: Meeting Address
+  description: The full address that will be both displayed and used by the Google
+    Map on the meetings page.<br><br>e.g. 123 W Pea Sherman, Wallaby Way, AZ 85138<br>
+  config:
+    required: true
+- type: text
+  name: meeting_frequency
+  label: Meeting Frequency
+  description: How often the club meetings take place.<br><br>e.g. 3rd Wednesday @
+    5:30 pm
+  config:
+    required: true
+- type: textarea
+  name: ve_testing_notification_text
+  label: VE Testing Notification Text
+  description: Text that's displayed throughout the site to remind people that testing
+    is available at all club meetings.
+  config:
+    wysiwyg: true
+    required: true
+    schema:
+      format: html-blocks
+- type: text
+  name: error_404_message
+  label: 404 Message
+  description: Text that's shown whenever a page is not found.
+  config:
+    required: true

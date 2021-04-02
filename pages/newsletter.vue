@@ -5,7 +5,7 @@
 				<h1
 					class="is-size-1 has-text-white has-background-black-transparent"
 				>
-					Join our mailing list!
+					Join our newsletter!
 				</h1>
 			</div>
 		</div>
@@ -13,9 +13,7 @@
 			<div class="column">
 				<div class="box">
 					<div class="content">
-						<p>
-							{{ settings.main_text }}
-						</p>
+						<p v-html="settings.main_text" />
 					</div>
 					<div>
 						<a
@@ -23,9 +21,16 @@
 							target="_blank"
 							rel="noopener noreferrer"
 						>
-							<button class="button is-primary">
-								Join
-							</button>
+							<a
+								href="https://secure.hamclubonline.com/"
+								target="_blank"
+							>
+								Ham Club Online
+								<font-awesome-icon
+									:icon="faExternalLinkAlt"
+									class="icon"
+								/>
+							</a>
 						</a>
 					</div>
 				</div>
@@ -36,6 +41,8 @@
 
 <script>
 import newsletterSettings from "../assets/settings/pages/newsletter.json";
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
 
 export default {
 	head: {
@@ -44,7 +51,11 @@ export default {
 	data() {
 		return {
 			settings: newsletterSettings,
+			faExternalLinkAlt,
 		};
+	},
+	components: {
+		"font-awesome-icon": FontAwesomeIcon,
 	},
 };
 </script>

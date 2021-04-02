@@ -1,0 +1,22 @@
+---
+label: Global Settings
+hide_body: true
+fields:
+- type: textarea
+  name: ve_testing_notification_text
+  label: ve_testing_notification_text
+- type: text
+  name: error_404_message
+  label: error_404_message
+- type: text
+  name: meeting_location_name
+  label: meeting_location_name
+- type: text
+  name: meeting_address
+  label: meeting_address
+- type: text
+  name: meeting_frequency
+  label: meeting_frequency
+- type: list
+  name: notifications
+  label: notifications

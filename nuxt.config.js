@@ -2,7 +2,8 @@ require("dotenv").config();
 const metadata = require("./assets/metadata.json");
 
 export default {
-	mode: "universal",
+	target: "static",
+
 	/*
 	 ** Headers of the page
 	 */

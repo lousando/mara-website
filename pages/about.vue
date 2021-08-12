@@ -5,7 +5,12 @@
 			<div class="column">
 				<h1
 					id="officers"
-					class="is-size-1 has-text-white has-text-centered has-background-black-transparent"
+					class="
+						is-size-1
+						has-text-white
+						has-text-centered
+						has-background-black-transparent
+					"
 				>
 					Officers
 				</h1>
@@ -51,7 +56,12 @@
 			<div class="column">
 				<h1
 					id="board-members"
-					class="is-size-1 has-text-white has-text-centered has-background-black-transparent"
+					class="
+						is-size-1
+						has-text-white
+						has-text-centered
+						has-background-black-transparent
+					"
 				>
 					Board Members
 				</h1>
@@ -104,7 +114,12 @@
 			<div class="column">
 				<h1
 					id="ve-team"
-					class="is-size-1 has-text-white has-text-centered has-background-black-transparent"
+					class="
+						is-size-1
+						has-text-white
+						has-text-centered
+						has-background-black-transparent
+					"
 				>
 					Volunteer Examiner Team
 				</h1>
@@ -148,7 +163,7 @@
 <script>
 import aboutSettings from "../assets/settings/pages/about.json";
 import _orderBy from "lodash/orderBy";
-import gravatarUrl from "gravatar-url";
+import { toSvg } from "jdenticon";
 import lozad from "lozad";
 
 const orderedBoardMembers = _orderBy(aboutSettings.board_members, "name");
@@ -177,12 +192,16 @@ function _addImgSrc(member) {
 		return member;
 	}
 
+  if (process.client) {
+    return {
+      ...member,
+      image_src: `data:image/svg+xml;base64,${btoa(toSvg(member.call_sign, 256))}`
+    };
+  }
+
 	return {
 		...member,
-		image_src: gravatarUrl(member.call_sign, {
-			default: "identicon",
-			size: "256",
-		}),
+		image_src: "",
 	};
 }
 </script>

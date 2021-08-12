@@ -5,6 +5,9 @@
   "meeting_address": "18160 N Maya Angelou Dr, Maricopa, AZ 85138",
   "meeting_frequency": "Every first Saturday of the month @ 9:00 AM",
   "notifications": [
-    "<b>CopaFest 2021 at AkChin Multitainment Center.</b><br/>October 30th 7am - 1pm"
+    {
+      "text": "<b><a href='https://copafest.org'>CopaFest 2021 at AkChin Multitainment Center.</a></b><br/>October 30th 7am - 1pm",
+      "type": "Success"
+    }
   ]
 }

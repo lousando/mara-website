@@ -6,11 +6,15 @@ fields:
   type: field_group_list
   fields:
   - name: text
-    type: text
+    type: textarea
+    default: ''
     config:
       required: true
+      wysiwyg: true
+      schema:
+        format: html
     label: Text
-    description: The text of the notification
+    description: The text of the notification.
   - name: type
     type: select
     default: Danger

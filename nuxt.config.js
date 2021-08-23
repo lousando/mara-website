@@ -28,12 +28,12 @@ export default {
 				content: "YgXjJ4qyDlPI1Wym0ui9w9vMhvp-7XXWnZMWcV6C7vQ",
 			},
 		],
-    script: [
-      {
-        type: "application/ld+json",
-        json: metadata
-      }
-    ],
+		script: [
+			{
+				type: "application/ld+json",
+				json: metadata,
+			},
+		],
 		link: [
 			// preloads
 			{ rel: "preload", as: "image", href: "/imgs/mara_logo.svg" },
@@ -60,7 +60,11 @@ export default {
 	/*
 	 ** Plugins to load before mounting the App
 	 */
-	plugins: [],
+	plugins: [
+		"~/plugins/composition-api",
+		"~/plugins/rich-text-renderer",
+		"~/plugins/components",
+	],
 
 	// router settings
 	router: {
@@ -70,11 +74,20 @@ export default {
 	/*
 	 ** Nuxt.js modules
 	 */
-	modules: ["@nuxtjs/sitemap"],
+	modules: [
+		"@nuxtjs/sitemap",
+		[
+			"storyblok-nuxt",
+			{
+				accessToken: process.env.NUXT_ENV_STORYBLOK_TOKEN,
+				cacheProvider: "memory",
+			},
+		],
+	],
 
-  sitemap: {
-	    hostname: "https://www.copahams.org"
-  },
+	sitemap: {
+		hostname: "https://www.copahams.org",
+	},
 
 	/*
 	 ** Build configuration

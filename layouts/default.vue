@@ -1,21 +1,25 @@
 <template>
 	<div>
 		<navbar />
-    <div
-      v-for="notification in this.$store.state.globalSettings.notifications"
-      :key="notification.text"
-      :class="{
-        notification: true,
-        'is-light': true,
-        'has-text-centered': true,
-         [`is-${notification.type.toLowerCase()}`]: true
-      }"
-      v-html="notification.text"
-    />
+		<div
+			v-for="notification in this.$store.state.globalSettings
+				.notifications"
+			:key="notification.text"
+			:class="{
+				notification: true,
+				'is-light': true,
+				'has-text-centered': true,
+				[`is-${notification.type.toLowerCase()}`]: true,
+			}"
+			v-html="notification.text"
+		/>
 
 		<section id="main-hero" class="hero">
 			<div
-				class="banner-background-container banner-background-container--loading"
+				class="
+					banner-background-container
+					banner-background-container--loading
+				"
 			>
 				<picture aria-hidden="true">
 					<!-- webp -->
@@ -133,7 +137,22 @@
 
 		<!-- main content -->
 		<main class="container">
-			<nuxt />
+			<section>
+				<!-- Page Header  -->
+				<component
+					v-for="blok in story.content.header"
+					:key="blok._uid"
+					:blok="blok"
+					:is="blok.component"
+				/>
+				<!-- page content  -->
+				<component
+					v-for="blok in story.content.body"
+					:key="blok._uid"
+					:blok="blok"
+					:is="blok.component"
+				/>
+			</section>
 		</main>
 
 		<footer class="footer has-text-centered">
@@ -201,9 +220,7 @@
 			</div>
 			<div class="columns has-text-center">
 				<div class="column">
-					<div>
-						Site contributions welcome on Github
-					</div>
+					<div>Site contributions welcome on Github</div>
 					<a
 						href="https://github.com/lousando/mara-website"
 						target="_blank"
@@ -229,14 +246,52 @@ import {
 	faGithub,
 	faInstagram,
 	faTwitter,
-	faYoutube
+	faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 import navbar from "../components/navbar";
 
 export default {
-	name: "mara-footer",
+	name: "layout-default",
+	asyncData(context) {
+		// We are getting only the draft version of the content in this example.
+		// In real world project you should ask for correct version of the content
+		// according to the environment you are deploying to.
+		const version =
+			process.env.NODE_ENV !== "production" ? "draft" : "published";
+		const fullSlug =
+			context.route.path == "/" || context.route.path == ""
+				? "home"
+				: context.route.path;
+
+		// Load the JSON from the API - loadig the home content (index page)
+		return context.app.$storyapi
+			.get(`cdn/stories/${fullSlug}`, {
+				version,
+			})
+			.then((res) => {
+				return res.data;
+			})
+			.catch((res) => {
+				if (!res.response) {
+					console.error(res);
+					context.error({
+						statusCode: 404,
+						message: "Failed to receive content form api",
+					});
+				} else {
+					console.error(res.response.data);
+					context.error({
+						statusCode: res.response.status,
+						message: res.response.data,
+					});
+				}
+			});
+	},
 	data() {
 		return {
+			story: {
+				content: {},
+			},
 			settings: defaultLayoutSettings,
 			faGithub,
 			faFacebook,
@@ -245,15 +300,54 @@ export default {
 			faYoutube,
 			faFlickr,
 			faAmazon,
-			faUtensils
+			faUtensils,
 		};
 	},
 	components: {
 		"font-awesome-icon": FontAwesomeIcon,
-		navbar
+		navbar,
 	},
 	mounted() {
 		_initGoogleAnalytics();
+
+		const fullSlug =
+			this.$route.path == "/" || this.$route.path == ""
+				? "home"
+				: this.$route.path;
+		const version =
+			process.env.NODE_ENV !== "production" ? "draft" : "published";
+
+		// initial pull
+		this.$storyapi
+			.get(`cdn/stories/${fullSlug}`, {
+				version: "draft",
+			})
+			.then((res) => {
+				this.story.content = res.data.story.content;
+			});
+
+		// todo: only allow this in dev
+		this.$storybridge(
+			() => {
+				const storyblokInstance = new StoryblokBridge();
+
+				storyblokInstance.on(
+					["input", "published", "change"],
+					(event) => {
+						if (event.action == "input") {
+							if (event.story.id === this.story.id) {
+								this.story.content = event.story.content;
+							}
+						} else {
+							window.location.reload();
+						}
+					}
+				);
+			},
+			(error) => {
+				console.error(error);
+			}
+		);
 	},
 	methods: {
 		onLoadBannerImage: () => {
@@ -266,8 +360,8 @@ export default {
 					"banner-background-container--loading"
 				);
 			}
-		}
-	}
+		},
+	},
 };
 
 function _initGoogleAnalytics() {
@@ -297,9 +391,8 @@ function _initGoogleAnalytics() {
 </script>
 
 <style lang="scss" scoped>
-
 .notification {
-  margin-top: 5rem;
+	margin-top: 5rem;
 }
 
 #main-hero {

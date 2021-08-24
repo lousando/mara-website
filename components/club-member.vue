@@ -12,7 +12,7 @@
 					</figure>
 				</div>
 				<div class="media-content">
-					<div class="title is-4">
+					<div class="title is-4" v-if="blok.name && blok.call_sign">
 						{{ blok.name }}, {{ blok.call_sign }}
 					</div>
 					<div class="subtitle is-6">
@@ -44,8 +44,6 @@ export default {
 	},
 	methods: {
 		getImage: function (member) {
-			console.log(member.image);
-
 			if (member.image.filename) {
 				return member.image.filename;
 			}

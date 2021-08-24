@@ -1,17 +1,13 @@
 <template>
 	<div>
 		<navbar />
-		<div
-			v-for="notification in this.$store.state.globalSettings
-				.notifications"
-			:key="notification.text"
-			:class="{
-				notification: true,
-				'is-light': true,
-				'has-text-centered': true,
-				[`is-${notification.type.toLowerCase()}`]: true,
-			}"
-			v-html="notification.text"
+		<!-- notifications -->
+		<component
+			v-for="blok in globalStory.notifications"
+			v-editable="blok"
+			:key="blok._uid"
+			:blok="blok"
+			:is="blok.component"
 		/>
 
 		<section id="main-hero" class="hero">
@@ -56,25 +52,34 @@
 					<div class="columns is-gapless">
 						<div class="column is-narrow is-hidden-mobile">
 							<img
-								src="/imgs/mara_logo.svg"
+								v-editable="globalStory"
+								v-if="globalStory.site_logo"
+								:src="globalStory.site_logo.filename"
 								width="200"
 								height="200"
-								alt="MARA Logo"
+								:alt="globalStory.site_logo.alt"
 							/>
 						</div>
 						<div class="column">
-							<div class="title">
+							<div v-editable="globalStory" class="title">
 								<nuxt-link class="has-text-white" to="/">
-									Maricopa Amateur Radio Association
+									{{ globalStory.main_heading }}
 								</nuxt-link>
 							</div>
-							<div class="subtitle has-text-white">
-								A 501(c)(3) nonprofit corporation
+							<div
+								v-editable="globalStory"
+								class="subtitle has-text-white"
+							>
+								{{ globalStory.main_subtitle }}
 							</div>
 							<!-- icons -->
 							<div>
 								<a
-									href="http://facebook.com/copahams"
+									v-if="
+										globalStory.social_link_facebook &&
+										globalStory.social_link_facebook.url
+									"
+									:href="globalStory.social_link_facebook.url"
 									target="_blank"
 									class="social-icon social-icon--facebook"
 									aria-label="MARA Facebook"
@@ -85,7 +90,11 @@
 									/>
 								</a>
 								<a
-									href="https://twitter.com/CopaHams"
+									v-if="
+										globalStory.social_link_twitter &&
+										globalStory.social_link_twitter.url
+									"
+									:href="globalStory.social_link_twitter.url"
 									target="_blank"
 									class="social-icon social-icon--twitter"
 									aria-label="MARA Twitter"
@@ -96,7 +105,13 @@
 									/>
 								</a>
 								<a
-									href="https://www.instagram.com/copahams/"
+									v-if="
+										globalStory.social_link_instagram &&
+										globalStory.social_link_instagram.url
+									"
+									:href="
+										globalStory.social_link_instagram.url
+									"
 									target="_blank"
 									class="social-icon social-icon--instagram"
 									aria-label="MARA Instagram"
@@ -107,7 +122,11 @@
 									/>
 								</a>
 								<a
-									href="https://www.youtube.com/channel/UC1JJQI7fnsLHcuerGbHLJKw"
+									v-if="
+										globalStory.social_link_youtube &&
+										globalStory.social_link_youtube.url
+									"
+									:href="globalStory.social_link_youtube.url"
 									target="_blank"
 									class="social-icon social-icon--youtube"
 									aria-label="MARA Youtube"
@@ -118,7 +137,11 @@
 									/>
 								</a>
 								<a
-									href="https://www.flickr.com/photos/copahams/albums"
+									v-if="
+										globalStory.social_link_flickr &&
+										globalStory.social_link_flickr.url
+									"
+									:href="globalStory.social_link_flickr.url"
 									target="_blank"
 									class="social-icon social-icon--flickr"
 									aria-label="MARA Flickr"
@@ -140,14 +163,14 @@
 			<section>
 				<!-- Page Header  -->
 				<component
-					v-for="blok in story.content.header"
+					v-for="blok in pageStory.header"
 					:key="blok._uid"
 					:blok="blok"
 					:is="blok.component"
 				/>
 				<!-- page content  -->
 				<component
-					v-for="blok in story.content.body"
+					v-for="blok in pageStory.body"
 					:key="blok._uid"
 					:blok="blok"
 					:is="blok.component"
@@ -250,6 +273,15 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import navbar from "../components/navbar";
 
+function splitStories(stories) {
+	const storiesContent = stories.map((s) => s.content);
+
+	return {
+		globalStory: storiesContent.find((s) => s.component === "global"),
+		pageStory: storiesContent.find((s) => s.component === "page"),
+	};
+}
+
 export default {
 	name: "layout-default",
 	asyncData(context) {
@@ -261,15 +293,15 @@ export default {
 		const fullSlug =
 			context.route.path == "/" || context.route.path == ""
 				? "home"
-				: context.route.path;
+				: context.route.path.replace(/^\//, "");
 
 		// Load the JSON from the API - loadig the home content (index page)
 		return context.app.$storyapi
-			.get(`cdn/stories/${fullSlug}`, {
+			.get(`cdn/stories?by_slugs=global/settings,${fullSlug}`, {
 				version,
 			})
 			.then((res) => {
-				return res.data;
+				return splitStories(res.data.stories);
 			})
 			.catch((res) => {
 				if (!res.response) {
@@ -289,9 +321,8 @@ export default {
 	},
 	data() {
 		return {
-			story: {
-				content: {},
-			},
+			globalStory: {},
+			pageStory: {},
 			settings: defaultLayoutSettings,
 			faGithub,
 			faFacebook,
@@ -313,17 +344,21 @@ export default {
 		const fullSlug =
 			this.$route.path == "/" || this.$route.path == ""
 				? "home"
-				: this.$route.path;
+				: this.$route.path.replace(/^\//, "");
 		const version =
 			process.env.NODE_ENV !== "production" ? "draft" : "published";
 
 		// initial pull
 		this.$storyapi
-			.get(`cdn/stories/${fullSlug}`, {
+			.get(`cdn/stories?by_slugs=global/settings,${fullSlug}`, {
 				version: "draft",
 			})
 			.then((res) => {
-				this.story.content = res.data.story.content;
+				const { globalStory, pageStory } = splitStories(
+					res.data.stories
+				);
+				this.globalStory = globalStory;
+				this.pageStory = pageStory;
 			});
 
 		// todo: only allow this in dev
@@ -334,9 +369,15 @@ export default {
 				storyblokInstance.on(
 					["input", "published", "change"],
 					(event) => {
-						if (event.action == "input") {
-							if (event.story.id === this.story.id) {
-								this.story.content = event.story.content;
+						if (
+							event.action == "input" ||
+							event.action == "change"
+						) {
+							switch (event.story?.content?.component) {
+								case "global":
+									this.globalStory = event.story.content;
+								case "page":
+									this.pageStory = event.story.content;
 							}
 						} else {
 							window.location.reload();

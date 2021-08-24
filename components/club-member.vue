@@ -48,9 +48,13 @@ export default {
 				return member.image.filename;
 			}
 
-			return `data:image/svg+xml;base64,${btoa(
-				toSvg(member.call_sign, 256)
-			)}`;
+			if (process.client) {
+				return `data:image/svg+xml;base64,${btoa(
+					toSvg(member.call_sign, 256)
+				)}`;
+			}
+
+			return "";
 		},
 	},
 };

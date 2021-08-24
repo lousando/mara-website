@@ -284,40 +284,32 @@ function splitStories(stories) {
 
 export default {
 	name: "layout-default",
-	asyncData(context) {
+	async fetch() {
 		// We are getting only the draft version of the content in this example.
 		// In real world project you should ask for correct version of the content
 		// according to the environment you are deploying to.
 		const version =
 			process.env.NODE_ENV !== "production" ? "draft" : "published";
 		const fullSlug =
-			context.route.path == "/" || context.route.path == ""
+			this.$nuxt.context.route.path == "/" ||
+			this.$nuxt.context.route.path == ""
 				? "home"
-				: context.route.path.replace(/^\//, "");
+				: this.$nuxt.context.route.path.replace(/^\//, "");
 
-		// Load the JSON from the API - loadig the home content (index page)
-		return context.app.$storyapi
-			.get(`cdn/stories?by_slugs=global/settings,${fullSlug}`, {
-				version,
-			})
-			.then((res) => {
-				return splitStories(res.data.stories);
-			})
-			.catch((res) => {
-				if (!res.response) {
-					console.error(res);
-					context.error({
-						statusCode: 404,
-						message: "Failed to receive content form api",
-					});
-				} else {
-					console.error(res.response.data);
-					context.error({
-						statusCode: res.response.status,
-						message: res.response.data,
-					});
+		try {
+			const res = await this.$nuxt.context.app.$storyapi.get(
+				`cdn/stories?by_slugs=global/settings,${fullSlug}`,
+				{
+					version,
 				}
-			});
+			);
+
+			const { globalStory, pageStory } = splitStories(res.data.stories);
+			this.globalStory = globalStory;
+			this.pageStory = pageStory;
+		} catch (error) {
+			console.log("$fetch failed: ", error);
+		}
 	},
 	data() {
 		return {
@@ -340,8 +332,6 @@ export default {
 	},
 	mounted() {
 		_initGoogleAnalytics();
-
-		this.loadStories();
 
 		// todo: only allow this in dev
 		this.$storybridge(
@@ -374,31 +364,11 @@ export default {
 	},
 	watch: {
 		$route() {
-			this.loadStories();
+			this.$fetch();
+			globalThis?.scrollTo(0, 0);
 		},
 	},
 	methods: {
-		loadStories: function () {
-			const fullSlug =
-				this.$route.path == "/" || this.$route.path == ""
-					? "home"
-					: this.$route.path.replace(/^\//, "");
-			const version =
-				process.env.NODE_ENV !== "production" ? "draft" : "published";
-
-			// initial pull
-			this.$storyapi
-				.get(`cdn/stories?by_slugs=global/settings,${fullSlug}`, {
-					version: "draft",
-				})
-				.then((res) => {
-					const { globalStory, pageStory } = splitStories(
-						res.data.stories
-					);
-					this.globalStory = globalStory;
-					this.pageStory = pageStory;
-				});
-		},
 		onLoadBannerImage: () => {
 			const loadingBanner = document.querySelector(
 				".banner-background-container--loading"

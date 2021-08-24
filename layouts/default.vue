@@ -341,25 +341,7 @@ export default {
 	mounted() {
 		_initGoogleAnalytics();
 
-		const fullSlug =
-			this.$route.path == "/" || this.$route.path == ""
-				? "home"
-				: this.$route.path.replace(/^\//, "");
-		const version =
-			process.env.NODE_ENV !== "production" ? "draft" : "published";
-
-		// initial pull
-		this.$storyapi
-			.get(`cdn/stories?by_slugs=global/settings,${fullSlug}`, {
-				version: "draft",
-			})
-			.then((res) => {
-				const { globalStory, pageStory } = splitStories(
-					res.data.stories
-				);
-				this.globalStory = globalStory;
-				this.pageStory = pageStory;
-			});
+		this.loadStories();
 
 		// todo: only allow this in dev
 		this.$storybridge(
@@ -390,7 +372,33 @@ export default {
 			}
 		);
 	},
+	watch: {
+		$route() {
+			this.loadStories();
+		},
+	},
 	methods: {
+		loadStories: function () {
+			const fullSlug =
+				this.$route.path == "/" || this.$route.path == ""
+					? "home"
+					: this.$route.path.replace(/^\//, "");
+			const version =
+				process.env.NODE_ENV !== "production" ? "draft" : "published";
+
+			// initial pull
+			this.$storyapi
+				.get(`cdn/stories?by_slugs=global/settings,${fullSlug}`, {
+					version: "draft",
+				})
+				.then((res) => {
+					const { globalStory, pageStory } = splitStories(
+						res.data.stories
+					);
+					this.globalStory = globalStory;
+					this.pageStory = pageStory;
+				});
+		},
 		onLoadBannerImage: () => {
 			const loadingBanner = document.querySelector(
 				".banner-background-container--loading"

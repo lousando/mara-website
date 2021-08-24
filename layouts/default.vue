@@ -274,11 +274,9 @@ import {
 import navbar from "../components/navbar";
 
 function splitStories(stories) {
-	const storiesContent = stories.map((s) => s.content);
-
 	return {
-		globalStory: storiesContent.find((s) => s.component === "global"),
-		pageStory: storiesContent.find((s) => s.component === "page"),
+		globalStory: stories.find((s) => s.content.component === "global"),
+		pageStory: stories.find((s) => s.content.component === "page"),
 	};
 }
 
@@ -305,14 +303,23 @@ export default {
 			);
 
 			const { globalStory, pageStory } = splitStories(res.data.stories);
-			this.globalStory = globalStory;
-			this.pageStory = pageStory;
+			this.globalStory = globalStory.content;
+			this.pageStory = pageStory.content;
+
+			// update title
+			this.pageStoryTitle = pageStory.name;
 		} catch (error) {
 			console.log("$fetch failed: ", error);
 		}
 	},
+	head() {
+		return {
+			title: this.pageStoryTitle,
+		};
+	},
 	data() {
 		return {
+			pageStoryTitle: "",
 			globalStory: {},
 			pageStory: {},
 			settings: defaultLayoutSettings,

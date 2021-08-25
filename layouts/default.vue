@@ -286,8 +286,9 @@ export default {
 		// We are getting only the draft version of the content in this example.
 		// In real world project you should ask for correct version of the content
 		// according to the environment you are deploying to.
-		const version =
-			process.env.NODE_ENV !== "production" ? "draft" : "published";
+		const version = Boolean(process.env.NUXT_ENV_STORYBLOK_PREVIEW)
+			? "draft"
+			: "published";
 		const fullSlug =
 			this.$nuxt.context.route.path == "/" ||
 			this.$nuxt.context.route.path == ""

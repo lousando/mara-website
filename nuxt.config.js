@@ -36,8 +36,9 @@ export default {
 			},
 		],
 		link: [
-			// preloads
-			{ rel: "preload", as: "image", href: "/imgs/mara_logo.svg" },
+			/**
+			 * preloads
+			 */
 			// banner
 			{
 				rel: "preload",

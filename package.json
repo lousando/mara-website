@@ -7,8 +7,7 @@
   "scripts": {
     "watch": "nuxt",
     "build": "nuxt generate",
-    "start": "nuxt start",
-    "forestry-preview": "nuxt --hostname 0.0.0.0 --port 8080"
+    "start": "nuxt start"
   },
   "dependencies": {
     "ky-universal": "^0.9.1",

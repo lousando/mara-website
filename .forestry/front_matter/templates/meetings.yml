@@ -1,8 +1,0 @@
----
-label: Meetings
-hide_body: true
-fields:
-- type: textarea
-  name: main_text
-  label: Main text
-  description: The text that will appear on the meetings page.

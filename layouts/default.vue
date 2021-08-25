@@ -340,34 +340,36 @@ export default {
 	mounted() {
 		_initGoogleAnalytics();
 
-		// todo: only allow this in dev
-		this.$storybridge(
-			() => {
-				const storyblokInstance = new StoryblokBridge();
+		// only allow this in dev
+		if (process.env.NODE_ENV !== "production") {
+			this.$storybridge(
+				() => {
+					const storyblokInstance = new StoryblokBridge();
 
-				storyblokInstance.on(
-					["input", "published", "change"],
-					(event) => {
-						if (
-							event.action == "input" ||
-							event.action == "change"
-						) {
-							switch (event.story?.content?.component) {
-								case "global":
-									this.globalStory = event.story.content;
-								case "page":
-									this.pageStory = event.story.content;
+					storyblokInstance.on(
+						["input", "published", "change"],
+						(event) => {
+							if (
+								event.action == "input" ||
+								event.action == "change"
+							) {
+								switch (event.story?.content?.component) {
+									case "global":
+										this.globalStory = event.story.content;
+									case "page":
+										this.pageStory = event.story.content;
+								}
+							} else {
+								window.location.reload();
 							}
-						} else {
-							window.location.reload();
 						}
-					}
-				);
-			},
-			(error) => {
-				console.error(error);
-			}
-		);
+					);
+				},
+				(error) => {
+					console.error(error);
+				}
+			);
+		}
 	},
 	watch: {
 		$route() {

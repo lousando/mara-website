@@ -345,6 +345,8 @@ export default {
 		navbar,
 	},
 	mounted() {
+		this.$fetch(); // make sure the first page we load has the right data
+
 		_initGoogleAnalytics();
 
 		// only allow this in dev

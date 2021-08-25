@@ -303,11 +303,17 @@ export default {
 			);
 
 			const { globalStory, pageStory } = splitStories(res.data.stories);
-			this.globalStory = globalStory.content;
-			this.pageStory = pageStory.content;
+
+			if (globalStory?.content) {
+				this.globalStory = globalStory.content;
+			}
+
+			if (pageStory?.content) {
+				this.pageStory = pageStory.content;
+			}
 
 			// update title
-			this.pageStoryTitle = pageStory.name;
+			this.pageStoryTitle = pageStory?.name;
 		} catch (error) {
 			console.log("$fetch failed: ", error);
 		}

@@ -347,7 +347,7 @@ export default {
 		_initGoogleAnalytics();
 
 		// only allow this in dev
-		if (process.env.NODE_ENV !== "production") {
+		if (Boolean(process.env.NUXT_ENV_STORYBLOK_PREVIEW)) {
 			this.$storybridge(
 				() => {
 					const storyblokInstance = new StoryblokBridge();

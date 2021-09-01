@@ -148,7 +148,7 @@ export default {
 		onClickSubmit: function () {
 			if (
 				this.challengeAnswer.toLocaleUpperCase() !==
-				this.blok.challenge_question.toLocaleUpperCase()
+				this.blok.challenge_answer.toLocaleUpperCase()
 			) {
 				this.challengeAnswer = ""; // clear the wrong answer
 				// tell them the answer is wrong

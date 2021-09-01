@@ -144,6 +144,9 @@ export default {
 			challengeAnswer: "",
 		};
 	},
+	mounted() {
+		emailjs.init(process.env.NUXT_ENV_EMAILJS_USER_ID);
+	},
 	methods: {
 		onClickSubmit: function () {
 			if (

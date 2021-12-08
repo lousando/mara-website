@@ -4,6 +4,7 @@
 			column: true,
 			'is-flex is-flex-direction-column': Boolean(blok.alignment),
 			[Boolean(blok.alignment) ? blok.alignment : '']: true,
+			[Boolean(blok.size) ? blok.size : '']: true
 		}"
 	>
 		<component

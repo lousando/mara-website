@@ -2,20 +2,19 @@
 	<div>
 		<navbar />
 		<!-- notifications -->
-		<component
-			v-for="blok in globalStory.notifications"
-			v-editable="blok"
-			:key="blok._uid"
-			:blok="blok"
-			:is="blok.component"
-		/>
+		<div class="notification-container">
+			<component
+				v-for="blok in globalStory.notifications"
+				v-editable="blok"
+				:key="blok._uid"
+				:blok="blok"
+				:is="blok.component"
+			/>
+		</div>
 
 		<section id="main-hero" class="hero">
 			<div
-				class="
-					banner-background-container
-					banner-background-container--loading
-				"
+				class="banner-background-container banner-background-container--loading"
 			>
 				<picture aria-hidden="true">
 					<!-- webp -->
@@ -428,8 +427,12 @@ function _initGoogleAnalytics() {
 </script>
 
 <style lang="scss" scoped>
-.notification {
-	margin-top: 5rem;
+.notification-container {
+	margin-top: 3.75rem;
+
+	.notification:not(:last-child) {
+		margin-bottom: 0.25rem;
+	}
 }
 
 #main-hero {

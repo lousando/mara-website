@@ -1,5 +1,8 @@
 <template>
-	<div class="columns">
+	<div :class="{
+	  columns: true,
+	  'is-mobile': blok.is_mobile
+	}">
 		<component
 			v-for="innerBlok in blok.row_content"
 			:key="innerBlok._uid"

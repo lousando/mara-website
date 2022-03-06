@@ -1,5 +1,5 @@
 <template>
-	<a :href="blok.href" :target="blok.target" ref="noopener" v-editable="blok">
+	<a :href="blok.href.url" :target="blok.target" ref="noopener" v-editable="blok">
 		<button class="button is-primary">
 			{{ blok.text }}
 		</button>

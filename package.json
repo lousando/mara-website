@@ -46,5 +46,6 @@
     "storyblok-nuxt": "^2.0.1",
     "stylelint": "^14.8.3",
     "vue-jest": "^3.0.7"
-  }
+  },
+  "packageManager": "yarn@3.2.1"
 }

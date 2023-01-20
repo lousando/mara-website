@@ -4,6 +4,13 @@
   "description": "MARA Website",
   "author": "Louis Sandoval",
   "private": true,
+  "volta": {
+    "node": "14.21.2",
+    "yarn": "1.22.19"
+  },
+  "engines": {
+    "node": ">=14 <15"
+  },
   "scripts": {
     "watch": "nuxt",
     "build": "nuxt generate",

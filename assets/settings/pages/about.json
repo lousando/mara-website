@@ -1,124 +1,148 @@
 {
   "officers": [
     {
-      "name": "Bob Howard",
-      "call_sign": "W8RH",
+      "name": "Cary Gielniak",
+      "call_sign": "K7CFG",
       "role": "President",
-      "bio": "I got into Amateur Radio in 2009. My old call sign, K9ZHJ, once belonged to my uncle, Tom Hanrahan.After passing my Technician exam in September of 2009, I was able to get his call back. With the assistance of my elmer, N5FW, I am really enjoying this hobby. Passed my General exam in February of 2010 and the Extra in December of 2010. My rig is a stock Icom IC 7610 with a AL-800H amp. The primary antenna is a A-4 older non \"S\" model on a WT51 tower. The wire antenna is an Icom AH-710 set up as an inverted V.  Mobile rig is FTM 400 and FT 70.   Also I am VE Team Liaison and past  President of the Maricopa Amateur Radio Association and now currently a board member www.copahams.org. and board member of Amateur Radio Coundil of Arizona www.arca-az.org   I now have W8RH. Recently got interested in Wires X, and now run a digital net every Wednesday evening at 7:00 PM MST on the DIGITAL DESERT room 28445. Looking forward to hearing from you."
+      "bio": "",
+      "image_src": "/imgs/officers/cary_gielniak.jpg"
     },
     {
-      "name": "Scott Bushman",
-      "call_sign": "WI7Y",
-      "role": "Vice President"
+      "name": "Dave Hagan",
+      "call_sign": "KK7FWJ",
+      "role": "Vice President",
+      "image_src": "/imgs/officers/dave_hagan.jpg",
+      "bio": "Dave Hagan has been involved in the delivery of major healthcare projects throughout the West and Canada.  His specialty is facilitating the implementation of the Toyota Production System into the design and construction of leading-edge healthcare centers. Dave is relatively new to amateur radio having recently earned his Technician's license. He looks forward to bringing his organizational and people skills to bear as a new member of the MARA Board. He and his wife Bethany live in Maricopa with their sheep-a-doodle Truman."
     },
     {
-      "name": "Bob Proctor",
-      "call_sign": "N6YPE",
-      "role": "Secretary",
-      "image_src": "/imgs/officers/n6ype.jpg",
-      "bio": "I was Elmered by K9MLD, Joel, in Wisconsin (now MI), and WB6AKI, Roque (Rocky), in California (now OK). My hometown is Fremont, CA, where I was first licensed in 1989. I moved to Minnesota in 1991 but never got used to the cold weather, later moved to North Carolina in summer of 2007. XYL is Cathy, she doesn't care for radio, but tolerates a little \"RF noise\" from my office/shack. I have CCR restrictions here, but hope to have a stealth HF antennas soon at the house. I have HF/VHF/UHF working in the car. Occasionally go bicycle mobile on 144/440 MHz. Work at a microcontroller company as an application engineer, mostly motor control stuff. Over the years, did lots of work with EMI/RFI, a skill that still comes in handy. Besides ham radio and bicycling, other hobbies include kayaking, fishing, astronomy, robotics and hiking."
+      "name": "Jerome Erickson",
+      "call_sign": "KK1JE",
+      "role": "Secretary"
     },
     {
-      "name": "George Hogan",
-      "call_sign": "K7GTH",
+      "name": "John Shepard",
+      "call_sign": "KK7NYB",
       "role": "Treasurer"
     }
   ],
   "board_members": [
     {
-      "name": "Louis Sandoval",
-      "call_sign": "W8LES"
+      "name": "Cary Gielniak",
+      "call_sign": "K7CFG",
+      "image_src": "/imgs/officers/cary_gielniak.jpg"
     },
     {
-      "name": "Glenn Cline",
-      "call_sign": "KG2LF"
+      "name": "Gary Gardner",
+      "call_sign": "K7GIZ"
     },
     {
-      "name": "Mario Barriere",
-      "call_sign": "KJ7NQH"
+      "name": "George Burger",
+      "call_sign": "W0PHX",
+      "image_src": "/imgs/officers/george_burger.jpg"
+    },
+    {
+      "name": "Jerome Erickson",
+      "call_sign": "KK1JE"
+    },
+    {
+      "name": "Stephen Palumbo",
+      "call_sign": "KR7I"
+    },
+    {
+      "name": "Phil Dore",
+      "call_sign": "KK7FZO"
+    },
+    {
+      "name": "Brent Jacobs",
+      "call_sign": "KK7FDL",
+      "image_src": "/imgs/officers/brent_jacobs.jpg"
     }
   ],
   "ve_team": [
     {
-      "name": "Bob Howard",
-      "call_sign": "W8RH"
+      "name": "Steven Palumbo",
+      "call_sign": "K7RI",
+      "role": "Deputy Team Leader"
     },
     {
-      "name": "Chris Canevit",
-      "call_sign": "W7CGC"
+      "name": "Cary Gielniak",
+      "call_sign": "K7CFG",
+      "role": "Team Leader"
     },
     {
-      "name": "Johnathan Wiltberger",
-      "call_sign": "NO7IN"
-    },
-    {
-      "name": "Steve Miller",
-      "call_sign": "W6SDM"
-    },
-    {
-      "name": "Joshua Babb",
-      "call_sign": "W7JAB"
-    },
-    {
-      "name": "James Charboneau",
-      "call_sign": "KC1BB"
-    },
-    {
-      "name": "David French",
-      "call_sign": "N7FAN"
-    },
-    {
-      "name": "McKay Monson",
-      "call_sign": "AC7CA"
-    },
-    {
-      "name": "Timothy Grant",
-      "call_sign": "W7TGG"
-    },
-    {
-      "name": "Paul Ellis",
-      "call_sign": "W7MA"
-    },
-    {
-      "name": "Norman Fasoletos",
-      "call_sign": "K7NWF"
-    },
-    {
-      "name": "Nathan Moore",
-      "call_sign": "K7NDM"
-    },
-    {
-      "name": "Bob Beltz",
-      "call_sign": "N7GW"
-    },
-    {
-      "name": "Ron Mc Kee",
-      "call_sign": "AJ7T"
+      "name": "Glenn Cline",
+      "call_sign": "KG2LF",
+      "role": "Deputy Team Leader"
     },
     {
       "name": "Scott Bushman",
-      "call_sign": "WI7Y"
-    },
-    {
-      "name": "Curt Steger",
-      "call_sign": "NA7CS",
-      "image_src": "/imgs/officers/na7cs.jpg"
-    },
-    {
-      "name": "Bill Beare",
-      "call_sign": "K7WSB"
-    },
-    {
-      "name": "Chris Butler",
-      "call_sign": "KF7TUP"
-    },
-    {
-      "name": "James Parkinson",
-      "call_sign": "KB8HEL"
+      "call_sign": "WI7Y",
+      "role": "Deputy Team Leader"
     },
     {
       "name": "Arthur Swander",
-      "call_sign": "AD7EM"
+      "call_sign": "AD7EM",
+      "role": "Volunteer Examiner"
+    },
+    {
+      "name": "Bill Beare",
+      "call_sign": "K7WSB",
+      "role": "Volunteer Examiner"
+    },
+    {
+      "name": "Chris Butler",
+      "call_sign": "KF7TUP",
+      "role": "Volunteer Examiner"
+    },
+    {
+      "name": "Chris Canevit",
+      "call_sign": "W7CGC",
+      "role": "Volunteer Examiner"
+    },
+    {
+      "name": "David French",
+      "call_sign": "N7FAN",
+      "role": "Volunteer Examiner"
+    },
+    {
+      "name": "James Parkinson",
+      "call_sign": "KB8HEL",
+      "role": "Volunteer Examiner"
+    },
+    {
+      "name": "Johnathan Wiltberger",
+      "call_sign": "NO7IN",
+      "role": "Volunteer Examiner"
+    },
+    {
+      "name": "McKay Monson",
+      "call_sign": "AC7CA",
+      "role": "Volunteer Examiner"
+    },
+    {
+      "name": "Norman Fasoletos",
+      "call_sign": "K7NWF",
+      "role": "Volunteer Examiner"
+    },
+    {
+      "name": "Paul Ellis",
+      "call_sign": "W7MA",
+      "role": "Volunteer Examiner"
+    },
+    {
+      "name": "Ron Mc Kee",
+      "call_sign": "AJ7T",
+      "role": "Volunteer Examiner"
+    },
+    {
+      "name": "Steve Miller",
+      "call_sign": "W6SDM",
+      "role": "Volunteer Examiner"
+    },
+    {
+      "name": "Timothy Grant",
+      "call_sign": "W7TGG",
+      "role": "Volunteer Examiner"
     }
   ]
 }

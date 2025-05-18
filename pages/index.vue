@@ -50,7 +50,7 @@
 					</info-notification>
           <img src="/imgs/ham_test_online_logo.png" alt="Ham Test Online Logo" />
           <p class="has-text-centered">
-            <a href="http://www.hamradiolicenseexam.com/">http://www.hamradiolicenseexam.com/</a>
+            <a href="https://www.hamradiolicenseexam.com/">https://www.hamradiolicenseexam.com/</a>
           </p>
 				</div>
 			</div>

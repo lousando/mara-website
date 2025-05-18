@@ -147,39 +147,20 @@
 					</div>
 				</div>
 				<!-- Events-->
-				<div class="navbar-item has-dropdown is-hoverable">
-					<span class="navbar-link">
-						<font-awesome-icon :icon="faCalendarAlt" class="icon" />
-						&nbsp; Events
-					</span>
-					<div class="navbar-dropdown is-boxed">
-						<a
-							class="navbar-item"
-							href="https://copafest.org"
-							target="_blank"
-						>
-							🎉&nbsp; CopaFest
-							<span class="spacer"></span>
-							<font-awesome-icon
-								:icon="faExternalLinkAlt"
-								class="icon"
-							/>
-						</a>
-						<a
-							class="navbar-item"
-							href="http://www.arca-az.org/main/calendar.html"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							🎊&nbsp; AZ Hamfests
-							<span class="spacer"></span>
-							<font-awesome-icon
-								:icon="faExternalLinkAlt"
-								class="icon"
-							/>
-						</a>
-					</div>
-				</div>
+        <a
+          class="navbar-item"
+          href="http://www.arca-az.org/main/calendar.html"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          🎊&nbsp; AZ Hamfests
+          <span class="spacer"></span>
+          <font-awesome-icon
+            :icon="faExternalLinkAlt"
+            class="icon"
+          />
+        </a>
+
 				<!-- Contact Us -->
 				<nuxt-link class="navbar-item" to="/contact">
 					<font-awesome-icon :icon="faComments" class="icon" />

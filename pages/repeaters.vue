@@ -25,10 +25,7 @@
 					v-for="repeater in settings.repeaters"
 					:key="repeater.rx_freq"
 				>
-					<div class="is-size-5" v-if="!repeater.is_club_repeater">
-						Hosted Repeater:
-					</div>
-					<div class="is-size-5" v-else>
+					<div class="is-size-5">
 						{{ repeater.qth }}
 					</div>
 					<div>
